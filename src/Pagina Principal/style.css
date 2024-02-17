@@ -1,9 +1,9 @@
- body{
+*{
     padding: 0px;
     margin: 0px;
- }
+}
 
-  header {
+header {
     top: 20px;
     margin-left: 10%;
     width: 85%;
@@ -14,16 +14,16 @@
     border-radius: 25px;
     background-color: #202B89;
     position: absolute;
-  }
+}
 
-  nav {
+nav {
     width: 800px;
     height: 30px;
     display: inline-flex;
     align-items: center;
-  }
+}
 
-  .header-text-element {
+.header-text-element {
     color: rgba(255, 255, 255, 1);
     height: auto;
     font-size: 18px;
@@ -32,19 +32,18 @@
     font-family: Inter;
     font-weight: 700;
     padding: 15px;
-  }
+}
 
 #logo-img {
     margin-left: 30px;
     width: 165px;
     height: 75px;
-  }
+}
 
 #background-img{
-  position: absolute;
-  width: 100%;
-  top: 0;
-  left: 0;
-  z-index: -1;
+    position: absolute;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: -1;
 }
-  
