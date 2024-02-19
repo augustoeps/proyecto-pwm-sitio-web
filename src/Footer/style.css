@@ -17,7 +17,7 @@ footer h3{
     border-bottom: 1px solid white;
     text-align: center;
     font-weight: bold;
-    font-size: 16px;
+    font-size: 18px;
 }
 
 footer ul{
@@ -25,7 +25,7 @@ footer ul{
     padding: 0;
     list-style: none;
     line-height: 1.6;
-    font-size: 14px;
+    font-size: 16px;
 }
 
 footer ul a{
@@ -43,6 +43,7 @@ footer ul a:hover{
     height: 40%;
     width: 80%;
     margin: 0 auto;
+    align-items: center;
 }
 
 .Columns{
@@ -54,8 +55,14 @@ footer ul a:hover{
     margin-top: 3em;
     padding-bottom: 2em;
     font-weight: bold;
-    font-size: 16px;
+    font-size: 20px;
+}
+.ListSocialMedia{
+    height: 25.6px;
 }
 
-
+.SocialImage{
+    width: 1em;
+    height: 1em;
+}
 
