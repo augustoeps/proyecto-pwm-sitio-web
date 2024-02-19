@@ -39,18 +39,25 @@ label {
 }
 
 input {
-    padding: 12px;
-    border-radius: 15px;
+    padding: 10px;
+    
     margin-bottom: 15px;
-    background-color: #edfff0;
+    background-color: none;
     border: 2px solid #3d3030;
-    color: #283629;
+    color:  black;
     outline: none;
     box-sizing: border-box;
+    font-size: 16px;
+    font-family: "inter", "Helvetica Neue";
+    margin-top: 15px;
+    border-bottom: 1px solid black;
+    border-left: none;
+    border-right: none;
+    border-top: none;
 }
 
 input::placeholder {
-    color: #b5cab6;
+    color: #000000;
 }
 
 .btn {
@@ -58,8 +65,8 @@ input::placeholder {
     color: #ffffff;
     border: 0;
     border-radius: 15px;
-    background-color: #212B89;
-    box-shadow: 0 0 20px rgba(0, 17, 254, 0.4);
+    background-color: #161e69;
+    box-shadow: 0 0 20px rgba(6, 11, 73, 0.4);
     cursor: pointer;
 }
 
