@@ -15,11 +15,20 @@ footer{
 
 
 }
+
+.image{
+    padding: 2px;
+}
+
+.elementoColumna{
+    padding: 0 15px;
+}
 footer h3{
     border-bottom: 1px solid white;
     text-align: center;
     font-weight: bold;
     font-size: 18px;
+
 }
 
 footer ul{
@@ -50,7 +59,7 @@ footer ul a:hover{
 
 .Columns{
     display: inline-block;
-    width: 8em;
+    width: 10em;
     margin: 1em 2em;
 }
 .Copy{
