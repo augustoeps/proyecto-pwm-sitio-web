@@ -1,5 +1,5 @@
 body {
-    font-family: Arial, Helvetica, sans-serif;
+    font-family:  inter,'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     min-height: 100vh;
     display: flex;
     align-items: center;
@@ -48,7 +48,6 @@ input {
     outline: none;
     box-sizing: border-box;
     font-size: 16px;
-    font-family: "inter", "Helvetica Neue";
     margin-top: 15px;
     border-bottom: 1px solid black;
     border-left: none;
@@ -58,6 +57,7 @@ input {
 
 input::placeholder {
     color: #000000;
+    font-family:  inter,'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 .btn {

@@ -21,11 +21,11 @@ form {
   max-width: 340px;
   width: 100%;
   box-sizing: border-box;
+  font-family:  inter,'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   
 }
 
 .input-group {
-  font-family: sans-serif;
   display: flex;
   flex-direction: column;
   text-align: left;
@@ -48,7 +48,6 @@ input {
   outline: none;
   box-sizing: border-box;
   font-size: 16px;
-  font-family: "inter", "Helvetica Neue";
   margin-top: 15px;
   border-bottom: 1px solid black;
   border-left: none;
@@ -59,7 +58,7 @@ input {
 
 input::placeholder {
   color: rgb(0, 0, 0);
-  font-family: inter;
+  font-family:  inter,'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 .btn {
