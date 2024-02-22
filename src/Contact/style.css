@@ -1,0 +1,135 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #edf2f7;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+  }
+  .contact-info {
+    background: #212B89;
+    color: white;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    padding: 20px;
+    width: 250px;
+    max-width: 400px;
+    height: 539px;
+
+
+    
+  }
+  .contact-form {
+    background: white;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    padding: 30px;
+    width: 25%;
+    max-width: 800px;
+    height: 518px;
+  }
+  .title {
+    
+    margin-left: 20px;
+  }
+
+  .subtitle{
+    margin-top: 2px;
+    margin-left: 20px;
+
+  }
+
+  .info {
+    margin-bottom: 1rem;
+    margin-left: 50px;
+    margin-top: 80px;
+  }
+  .info i {
+    margin-right: 10px;
+  }
+  .input-group {
+    margin-bottom: 1rem;
+  }
+  .input-group label {
+    display: block;
+    margin-bottom: .5rem;
+  }
+  .input-group input,
+  .input-group textarea {
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ced4da;
+  }
+  .input-group textarea {
+    resize: vertical;
+  }
+  .radio-group {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+  }
+  .radio-group label {
+    margin-left: 10px;
+  }
+  .btn {
+    display: block;
+    width: 100%;
+    padding: 6px;
+    background: #212B89;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-transform: uppercase;
+  }
+  .btn:hover{
+
+    background: gray;
+
+  }
+
+  .social-icons{
+
+    margin-left: 40px;
+  }
+  .social-icons i {
+    margin-left: 5px;
+    text-align: center;
+    margin-top: 50px;
+    font-size: 24px;
+  }
+  .social-icons a {
+    color: white;
+    text-decoration: none;
+    display: inline-block;
+    margin-left: 20px;
+  }
+  @media screen and (max-width: 960px) {
+    .container {
+      flex-direction: column;
+      align-items: stretch;
+    }
+    .contact-info,
+    .contact-form {
+      width: 100%;
+      max-width: none;
+      border-radius: 0;
+    }
+    .contact-info {
+      border-bottom-left-radius: 10px;
+      border-bottom-right-radius: 10px;
+      order: 2;
+    }
+    .contact-form {
+      border-top-left-radius: 10px;
+      border-top-right-radius: 10px;
+      order: 1;
+    }
+  }
