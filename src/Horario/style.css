@@ -10,17 +10,16 @@
     display: inline-flexbox;
     margin-top: 3em;
     padding: 1.5em;
+    font-family:  inter,'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 
     header{
         h2{
             font-size: 1.3em;
-            font-family: Inter;
             padding-bottom: 5%;
         }
     }
 
     p{
-        font-family: Inter;
         font-size: 0.8em;
     }
 
