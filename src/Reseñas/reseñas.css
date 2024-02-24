@@ -17,6 +17,8 @@
 .stars{
     list-style: none;
     display: inline-flex;
+    width: 80px;
+    margin-right: 2em;
 }
 
 .card {
@@ -24,7 +26,7 @@
     box-shadow: 0 100px 145px rgba(0, 0, 0, 0.25);
     border-radius: 25px;
     display: inline-block;
-    width: 20em;
+    width: 22em;
     justify-content: center;
     align-items: center;
     font-family:  inter,'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -49,4 +51,5 @@
             font-weight: bold;
         }
     }
+
 }
