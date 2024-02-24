@@ -50,13 +50,16 @@ input {
 
 
 input::placeholder {
-  color: rgb(0, 0, 0);
+  color: rgb(0, 0, 0, 0.6);
   font-family:  inter,'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+input:focus::placeholder{
+  color: rgba(0, 0, 0 , 0);
 }
 
 
 
-/* CSS */
 .submit-button {
   margin: 20px;
   padding: 15px 30px;
