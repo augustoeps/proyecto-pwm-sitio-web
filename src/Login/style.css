@@ -54,17 +54,31 @@ input::placeholder {
   font-family:  inter,'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
+
+
+/* CSS */
 .submit-button {
-  font-size: 16px;
-  color: #ffffff;
-  border: 0;
-  border-radius: 10px;
-  background-color: #161e69;
-  box-shadow: 0 0 10px rgba(0, 17, 254, 0.4);
+  margin: 20px;
+  padding: 15px 30px;
+  text-align: center;
+  transition: 0.5s;
+  background-size: 200% auto;
+  color: white;
+  border-radius: 15px;
+  border: 0px;
+  font-weight: 600;
+  background-image: linear-gradient(45deg, black 0%, #161e69  60%, #161e69  100%);
   cursor: pointer;
-  margin-top: 8%;
 }
 
 .submit-button:hover {
-  background-color: rgb(0, 0, 0);
+  background-position: right center;
+  color: #fff;
+  text-decoration: none;
+  box-shadow: 0px 0px 10px 1px #161e69;
+}
+
+.submit-button:active {
+  transform: scale(0.90);
+  box-shadow: none;
 }
