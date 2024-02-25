@@ -7,16 +7,20 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 100vh;
-  min-height: 100vh;
+  min-height: 70vh;
+  background-image: url("../../resources/background-pattern.webp");
+  background-repeat: repeat-y;
+  background-size: cover;
+
 }
 
 form {
+  background-color: #fff;
   max-width: 350px;
   width: 100%;
   border-radius: 25px;
   padding: 30px;
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+  box-shadow: 0px 0px 80px rgba(0, 0, 0, 1);
   text-align: center;
   box-sizing: border-box;
   font-family:  inter,'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -42,7 +46,7 @@ input {
   box-sizing: border-box;
   outline: none;
   border: none;
-  border-bottom: 3px solid #161e69;
+  border-bottom: 3px solid #202B89;
   font-size: 16px;
   color:  black;
 }
@@ -70,7 +74,7 @@ input:focus::placeholder{
   border-radius: 15px;
   border: 0px;
   font-weight: 600;
-  background-image: linear-gradient(45deg, black 0%, #161e69  60%, #161e69  100%);
+  background-image: linear-gradient(45deg, black 0%, #202B89  60%, #202B89 100%);
   cursor: pointer;
 }
 
@@ -78,10 +82,30 @@ input:focus::placeholder{
   background-position: right center;
   color: #fff;
   text-decoration: none;
-  box-shadow: 0px 0px 10px 1px #161e69;
+  box-shadow: 0px 0px 10px 1px #202B89;
 }
 
 .submit-button:active {
   transform: scale(0.90);
   box-shadow: none;
+}
+
+.truck-image {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  z-index: -3;
+  aspect-ratio: 152/109;
+  max-width: 360px;
+}
+
+#right-truck{
+  left: 0;
+  transform: scaleX(-1);
+}
+
+@media only screen and (max-width: 720px) {
+  #right-truck{
+      display: none;
+  }
 }
