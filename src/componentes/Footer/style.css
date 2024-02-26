@@ -10,7 +10,7 @@ footer{
     justify-content: center;
     text-align: center;
     font-family:  inter,'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    position: absolute;
+    position: relative;
     bottom: 0;
 }
 
