@@ -7,16 +7,20 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 100vh;
-  min-height: 100vh;
+  min-height: 70vh;
+  background-image: url("../../resources/background-pattern.webp");
+  background-repeat: repeat-y;
+  background-size: cover;
+
 }
 
 form {
+  background-color: #fff;
   max-width: 350px;
   width: 100%;
   border-radius: 25px;
   padding: 30px;
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+  box-shadow: 0px 0px 80px rgba(0, 0, 0, 1);
   text-align: center;
   box-sizing: border-box;
   font-family:  inter,'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -42,7 +46,7 @@ input {
   box-sizing: border-box;
   outline: none;
   border: none;
-  border-bottom: 3px solid #161e69;
+  border-bottom: 3px solid #202B89;
   font-size: 16px;
   color:  black;
 }
@@ -50,21 +54,58 @@ input {
 
 
 input::placeholder {
-  color: rgb(0, 0, 0);
+  color: rgb(0, 0, 0, 0.6);
   font-family:  inter,'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
+input:focus::placeholder{
+  color: rgba(0, 0, 0 , 0);
+}
+
+
+
 .submit-button {
-  font-size: 16px;
-  color: #ffffff;
-  border: 0;
-  border-radius: 10px;
-  background-color: #161e69;
-  box-shadow: 0 0 10px rgba(0, 17, 254, 0.4);
+  margin: 20px;
+  padding: 15px 30px;
+  text-align: center;
+  transition: 0.5s;
+  background-size: 200% auto;
+  color: white;
+  border-radius: 15px;
+  border: 0px;
+  font-weight: 600;
+  background-image: linear-gradient(45deg, black 0%, #202B89  60%, #202B89 100%);
   cursor: pointer;
-  margin-top: 8%;
 }
 
 .submit-button:hover {
-  background-color: rgb(0, 0, 0);
+  background-position: right center;
+  color: #fff;
+  text-decoration: none;
+  box-shadow: 0px 0px 10px 1px #202B89;
+}
+
+.submit-button:active {
+  transform: scale(0.90);
+  box-shadow: none;
+}
+
+.truck-image {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  z-index: -3;
+  aspect-ratio: 152/109;
+  max-width: 360px;
+}
+
+#right-truck{
+  left: 0;
+  transform: scaleX(-1);
+}
+
+@media only screen and (max-width: 720px) {
+  #right-truck{
+      display: none;
+  }
 }
