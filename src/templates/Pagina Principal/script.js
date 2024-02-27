@@ -6,16 +6,16 @@ document.addEventListener('DOMContentLoaded', async function() {
 
 async function cargarEstructura() {
     let appBody = document.querySelector("body");
-    cargarComponente(appBody, '../../componentes/Cabecera/');
-    cargarComponente(appBody, '../../componentes/Horario/');
-    cargarComponente(appBody, '../../componentes/Footer/');
+    await cargarComponente(appBody, '../../componentes/Cabecera/');
+    await cargarComponente(appBody, '../../componentes/Horario/');
+    await cargarComponente(appBody, '../../componentes/Footer/');
 }
 
 
 
 async function cargarComponente(body, url) {
-    body.appendChild(await cargarTemplate(url))
     document.head.appendChild(await cargarEstilo(url));
+    body.appendChild(await cargarTemplate(url))
 }
 
 
