@@ -4,22 +4,21 @@
 }
 
 .header{
-    position: absolute;
+    position: fixed;
     top: 0;
     width: 100%;
     align-items: center;
     justify-content: center;
     display: inline-flex;
     flex-wrap: wrap;
+
 }
 
 .container {
     width: 50%;
-    height: 60%;
     display: flex;
     align-items: center;
-    margin: 2em auto;
-    justify-content: space-around;
+    margin: 1em auto;
     border-radius: 25px;
     background-color: rgb(32, 43, 137);
 }
