@@ -1,6 +1,5 @@
 document.addEventListener("DOMContentLoaded", async function () {
 	await cargarEstructura();
-	await cargarEstilo();
 });
 
 async function cargarEstructura() {
