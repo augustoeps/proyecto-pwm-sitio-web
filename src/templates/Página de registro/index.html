@@ -18,18 +18,22 @@
 					name="name"
 					id="name"
 					placeholder="Nombre y apellidos"
+					required
 				/>
 				<input
 					type="email"
 					name="email"
 					id="email"
 					placeholder="Correo Electronico"
+					required
+					pattern="[a-z0-9._%+\-]+@[a-z0-9.\-]+\.[a-z]{2,}$"
 				/>
 				<input
 					type="password"
 					name="password"
 					id="password"
 					placeholder="Contraseña"
+					required
 				/>
 				<input class="submit-button" type="submit" value="Registrarse" />
 			</div>

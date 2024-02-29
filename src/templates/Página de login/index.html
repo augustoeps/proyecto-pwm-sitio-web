@@ -8,7 +8,7 @@
 	</head>
 
 	<body>
-		<form>
+		<form >
 			<h2>Inicia Sesión</h2>
 
 			<div class="input-group">
@@ -17,12 +17,16 @@
 					name="email"
 					id="email"
 					placeholder="Correo Electronico"
+					required
+					pattern="[a-z0-9._%+\-]+@[a-z0-9.\-]+\.[a-z]{2,}$"
+					title="Correo Electronico"
 				/>
 				<input
 					type="password"
 					name="password"
 					id="password"
 					placeholder="Contraseña"
+					required
 				/>
 				<input class="submit-button" type="submit" value="Iniciar Sesión" />
 			</div>
