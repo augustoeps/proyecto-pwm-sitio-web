@@ -1,35 +1,38 @@
 body {
 	font-family: inter, "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-	background-color: #edf2f7;
 	margin: 0;
 	padding: 0;
-	box-sizing: border-box;
 }
 .container {
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	min-height: 100vh;
-	padding: 20px;
+
 }
+
 .contact-info {
-	background: #212b89;
+	background: rgb(33, 43, 137);
 	color: white;
-	border-top-left-radius: 10px;
-	border-bottom-left-radius: 10px;
+	text-align: center;
+	border-radius: 10px 0 0 10px;
 	padding: 20px;
-	width: 250px;
-	max-width: 400px;
-	height: 539px;
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+
+
+	em {
+		font-family: inter, "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+		font-style: normal;
+		font-weight: 400;
+		margin-left: 10px ;
+	}
 }
+
 .contact-form {
 	background: white;
-	border-top-right-radius: 10px;
-	border-bottom-right-radius: 10px;
+	border-radius: 0 10px 10px 0;
 	padding: 30px;
-	width: 25%;
-	max-width: 800px;
-	height: 518px;
 }
 
 .contact-form textarea {
@@ -38,43 +41,43 @@ body {
 	border-radius: 5px;
 	border: 1px solid #ced4da;
 }
-.title {
-	margin-left: 20px;
-}
+
 
 .subtitle {
 	margin-top: 2px;
-	margin-left: 20px;
+
 }
 
 .info {
-	margin-bottom: 1rem;
-	margin-left: 50px;
-	margin-top: 80px;
-	height: 250px;
-	display: block;
-	text-align: center;
-	width: 160px;
+	display: flex;
+	flex-direction: column;
+	margin-right: 1.3em;
+	margin-bottom: 20%;
 }
+
 .info i {
 	margin-top: 50px;
-	margin-right: 10px;
 }
+
 .input-group {
-	margin-bottom: 1rem;
+	margin-bottom: 2em;
 }
+
 .input-group label {
 	display: block;
-	margin-bottom: 0.5rem;
+	margin-top: 1.5em;
+	margin-bottom: 1em;
 }
+
 .input-group input {
 	width: 100%;
 	padding: 10px;
-	border-radius: 5px;
+	border-radius: 10px;
 	border: 1px solid #ced4da;
 }
-.input-group textarea {
-	resize: vertical;
+.contact-form textarea {
+	margin-top: 0.8em;
+	resize: none;
 }
 .radio-group {
 	display: flex;
@@ -82,7 +85,10 @@ body {
 	margin-bottom: 1rem;
 }
 .radio-group label {
-	margin-left: 10px;
+	display: flex;
+	flex-direction: row;
+	margin-left: 1em;
+	margin-bottom: 1em;
 }
 .btn {
 	display: block;
@@ -109,20 +115,14 @@ body {
 }
 
 .social-icons {
-	margin-left: 40px;
+	margin-top: 9em;
+	justify-content: center;
+	display: flex;
+	flex-direction: row;
+	gap: 6%;
 }
-.social-icons i {
-	margin-left: 5px;
-	text-align: center;
-	margin-top: 50px;
-	font-size: 24px;
-}
-.social-icons a {
-	color: white;
-	text-decoration: none;
-	display: inline-block;
-	margin-left: 20px;
-}
+
+
 
 @media screen and (max-width: 960px) {
 	.container {

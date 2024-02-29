@@ -15,62 +15,74 @@
 	</head>
 	<body>
 		<div class="container">
-			<div class="contact-info">
+			<section class="contact-info">
 				<h2 class="title">Contactar</h2>
 				<p class="subtitle">Datos del taller</p>
 				<div class="info">
-					<i class="fas fa-phone"></i> +1012 3456 789
+					<i class="fas fa-phone"><em>+1012 3456 789</em></i>
 
-					<i class="fas fa-envelope"></i> taller@gmail.com
+					<i class="fas fa-envelope"> <em>taller@gmail.com</em></i>
 
-					<i class="fas fa-map-marker-alt"></i> Dirección
+					<i class="fas fa-map-marker-alt"><em>‎ Dirección</em></i>
 				</div>
 
 				<div class="social-icons">
-					<a href="#"><i class="fab fa-instagram"></i></a>
-					<a href="#"><i class="fab fa-facebook-f"></i></a>
-					<a href="#"><i class="fab fa-twitter"></i></a>
+					<a class="image" href="#">
+						<img
+							class="SocialImage"
+							src="../../../resources/icons8-instagram.svg"
+						/>
+					</a>
+					<a class="image" href="#">
+						<img
+							class="SocialImage"
+							src="../../../resources/icons8-facebook.svg"
+						/>
+					</a>
+					<a class="image" href="#">
+						<img
+							class="SocialImage"
+							src="../../../resources/icons8-whatsapp.svg"
+						/>
+					</a>
 				</div>
-			</div>
+			</section>
 
 			<form class="contact-form">
 				<div class="input-group">
-					<label for="name">Nombre</label>
-					<input type="text" id="name" placeholder="Nombre" />
+					<label for="name">Nombre:</label>
+					<input type="text" id="name" />
 
-					<label for="surname">Apellidos</label>
-					<input type="text" id="surname" placeholder="Apellidos" />
+					<label for="surname">Apellidos:</label>
+					<input type="text" id="surname" />
 
-					<label for="email">correo:</label>
-					<input type="email" id="email" placeholder="Correo Electrónico" />
+					<label for="email">Correo Electrónico:</label>
+					<input type="email" id="email" />
 
-					<label for="phone">Número de telefono</label>
-					<input type="tel" id="phone" placeholder="+1012 3456 789" />
+					<label for="phone">Número de telefono:</label>
+					<input type="tel" id="phone" />
 				</div>
 				<div class="radio-group">
-					<div>
-						<label><input type="radio" name="subject" /> Genérico</label>
-					</div>
-					<div>
-						<label><input type="radio" name="subject" /> Genérico</label>
-					</div>
-					<div>
-						<label><input type="radio" name="subject" /> Genérico</label>
-					</div>
-					<div>
-						<label><input type="radio" name="subject" /> otros</label>
-					</div>
+					<label><input type="radio" name="subject" /> Genérico</label>
+
+					<label><input type="radio" name="subject" /> Genérico</label>
+
+					<label><input type="radio" name="subject" /> Genérico</label>
+
+					<label><input type="radio" name="subject" /> otros</label>
 				</div>
 
-				<label for="message">Mensaje</label>
-				<textarea
-					id="message"
-					rows="4"
-					placeholder="escribe tu mensaje"
-				></textarea>
+				<div>
+					<label for="message">Mensaje:</label>
+					<textarea
+						id="message"
+						rows="4"
+						placeholder="escribe tu mensaje"
+					></textarea>
+				</div>
 
-				<button type="submit" class="btn">Enviar</button>
-			</div>
+				<button type="submit" class="button">Enviar</button>
+			</form>
 		</div>
 	</body>
 </html>
