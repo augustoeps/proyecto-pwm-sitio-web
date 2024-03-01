@@ -22,7 +22,7 @@ body {
 .services-header {
 	font-size: 48px;
 	color: black;
-	margin-bottom: 24px;
+	margin-bottom: 1.2em;
 }
 .card-container {
 	display: inline-flex;
