@@ -5,10 +5,9 @@ body {
 }
 .container {
 	display: flex;
+	
 	justify-content: center;
-	padding: 20px;
-
-
+	margin: 3%;
 }
 
 .contact-info {
@@ -16,10 +15,11 @@ body {
 	color: white;
 	text-align: center;
 	border-radius: 10px 0 0 10px;
-	padding: 20px;
+	padding: 0 3%;
 	display: flex;
 	flex-direction: column;
 	box-shadow: 0 10px 145px rgba(0, 0, 0, 0.25);
+	font-size: 14px;
 
 
 	em {
@@ -33,7 +33,7 @@ body {
 .contact-form {
 	background: white;
 	border-radius: 0 10px 10px 0;
-	padding: 30px;
+	padding: 0px 30px;
 	box-shadow: 0 10px 145px rgba(0, 0, 0, 0.25);
 	align-content: center;
 	display: grid;
@@ -56,7 +56,7 @@ body {
 	display: flex;
 	flex-direction: column;
 	margin-right: 1.3em;
-	margin-bottom: 20%;
+	margin-bottom: 10%;
 }
 
 .info i {
@@ -69,13 +69,14 @@ body {
 
 .input-group label {
 	display: block;
-	margin-top: 1.5em;
+	font-size: 14px;
+	margin-top: 1em;
 	margin-bottom: 1em;
 }
 
 .input-group input {
 	width: 100%;
-	padding: 10px;
+	padding: 5px;
 	border-radius: 10px;
 	border: 1px solid #ced4da;
 }
@@ -93,6 +94,11 @@ body {
 	flex-direction: row;
 	margin-left: 1em;
 	margin-bottom: 1em;
+	font-size: 14px;
+}
+
+.message label{
+	font-size: 14px;
 }
 .btn {
 	display: block;
@@ -119,7 +125,7 @@ body {
 }
 
 .social-icons {
-	margin-top: 16em;
+	margin-top: 14em;
 	justify-content: center;
 	display: flex;
 	flex-direction: row;
