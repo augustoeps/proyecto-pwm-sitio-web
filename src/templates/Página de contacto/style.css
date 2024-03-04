@@ -77,8 +77,8 @@ body {
 .input-group input {
 	width: 100%;
 	padding: 5px;
-	border-radius: 10px;
-	border: 1px solid #ced4da;
+    border: none;
+    border-bottom: 1px solid #000000;
 }
 .contact-form textarea {
 	margin-top: 0.8em;
