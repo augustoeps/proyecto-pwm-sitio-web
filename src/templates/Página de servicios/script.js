@@ -1,5 +1,6 @@
 document.addEventListener("DOMContentLoaded", async function () {
 	await cargarEstructura();
+	await cargarFuncionalidad();
 });
 
 async function cargarEstructura() {
@@ -31,4 +32,15 @@ async function cargarEstilo(url) {
 	linkElement.rel = "stylesheet";
 
 	return linkElement;
+}
+
+async function cargarFuncionalidad() {
+	let appBody = document.querySelector("html");
+	await cargarScript(appBody, "../../componentes/Cabecera/");
+}
+
+async function cargarScript(body, url) {
+	const scriptElement = document.createElement("script");
+	scriptElement.src = url + "script.js";
+	body.appendChild(scriptElement);
 }

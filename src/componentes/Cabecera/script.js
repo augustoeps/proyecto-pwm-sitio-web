@@ -1,16 +1,13 @@
-document.addEventListener("DOMContentLoaded", async function () {
-	header_button = document.getElementById("header-button");
-    hided = false
-    header_button.addEventListener("click",  function () {
-        header= document.getElementById("header")
-        if (hided){
-            header_animation_show(header)
-        }else{
-            header_animation_hide(header);
-        }
-    })
-});
-
+header_button = document.getElementById("header-button");
+hided = false
+header_button.addEventListener("click",  function () {
+    header= document.getElementById("header")
+    if (hided){
+        header_animation_show(header)
+    }else{
+        header_animation_hide(header);
+    }
+})
 
 function header_animation_show(header){
     header.classList.add("header-animated-left")
