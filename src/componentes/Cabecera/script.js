@@ -1,5 +1,5 @@
 header_button = document.getElementById("header-button");
-hided = false
+hided = true
 header_button.addEventListener("click",  function () {
     header= document.getElementById("header")
     if (hided){
@@ -13,7 +13,7 @@ function header_animation_show(header){
     header.classList.add("header-animated-left")
     header.disabled = true
     header.addEventListener("animationend", () => {
-        header.style.transform = "translateX(0)";
+        header.style.transform = "translateX(-210px)";
         setTimeout(function() {
             header_button.disabled = false
             hided = false
