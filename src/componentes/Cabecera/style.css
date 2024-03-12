@@ -96,7 +96,7 @@ nav .header-text-element {
 	.container {
 		position: fixed;
 		top: 5%;
-		right: 0.5em;
+		right: -200px;
 		width: fit-content;
 		align-items: center;
 		justify-content: center;
@@ -119,21 +119,19 @@ nav .header-text-element {
 
 	@keyframes header-animation-right {
 		0% {
-			transform: translateX(0);
+			transform: translateX(-210px);
 		}
 		100% {
-			transform: translateX(200px);
-			display: none;
+			transform: translateX(0);
 		}
 	}
 
 	@keyframes header-animation-left {
 		0% {
-			transform: translateX(200px);
-			display: flex;
+			transform: translateX(0);
 		}
 		100% {
-			transform: translateX(0);
+			transform: translateX(-210px);
 		}
 	}
 
