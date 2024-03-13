@@ -19,7 +19,6 @@ main h1 {
 	box-shadow: 0px 100px 145px rgba(0, 0, 0, 0.25);
 	border-radius: 25px;
 	display: inline-flexbox;
-	margin-top: 3em;
 	padding: 1.5em;
 
 	header {
@@ -42,24 +41,27 @@ main h1 {
 .data {
 	display: flex;
 	flex-direction: column;
+	row-gap: 3.5em;
+	justify-items: center;
 }
 
 .information {
+	margin-top: 3em;
 	display: flex;
 	flex-wrap: wrap;
-	align-items: center;
 	justify-content: center;
-	gap: 10em;
+	column-gap: 12em;
+	row-gap: 3.5em;
 }
 
 #social {
-	background-color: black;
+	display: flex;
 	align-content: center;
+	background-color: black;
 	width: 8em;
 	height: 2em;
-	display: flex;
-	gap: 12%;
-	margin-left: 6%;
+	gap: 1em;
+	margin: auto;
 
 	img {
 		width: 2em;
@@ -68,9 +70,7 @@ main h1 {
 }
 
 #address {
-	width: 260px;
-	height: 260px;
-	margin-top: 0%;
-	margin-bottom: 2em;
-	padding: 0%;
+	margin: auto 0;
+	padding: 0;
+	width: 20em;
 }
