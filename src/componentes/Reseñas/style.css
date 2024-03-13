@@ -9,13 +9,13 @@
 	margin-left: 1em;
 	border-radius: 50%;
 }
-.title{
+.title {
 	text-align: center;
 	font-size: 30px;
-    font-family:  inter,'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+	font-family: inter, "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 	margin-top: 4em;
 }
-.reviews{
+.reviews {
 	display: flex;
 	flex-wrap: wrap;
 	row-gap: 5em;
@@ -27,7 +27,7 @@
 }
 
 .comment {
-	padding:  1em;
+	padding: 1em;
 }
 
 .card {
@@ -43,19 +43,18 @@
 	margin-right: 7%;
 	margin-left: 5%;
 
-
 	header {
 		display: flex;
 		align-items: center;
 		justify-content: space-between;
 		padding-top: 3%;
-		
+
 		h2 {
 			text-align: center;
 			font-size: 1em;
 			padding-left: 5%;
 		}
-		
+
 		span {
 			color: #202b89;
 			margin-left: 10%;

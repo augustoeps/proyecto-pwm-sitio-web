@@ -5,7 +5,7 @@ body {
 }
 .container {
 	display: flex;
-	
+
 	justify-content: center;
 	margin: 3%;
 }
@@ -21,12 +21,11 @@ body {
 	box-shadow: 0 10px 145px rgba(0, 0, 0, 0.25);
 	font-size: 14px;
 
-
 	em {
 		font-family: inter, "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 		font-style: normal;
 		font-weight: 400;
-		margin-left: 10px ;
+		margin-left: 10px;
 	}
 }
 
@@ -46,10 +45,8 @@ body {
 	border: 1px solid #ced4da;
 }
 
-
 .subtitle {
 	margin-top: 2px;
-
 }
 
 .info {
@@ -77,8 +74,8 @@ body {
 .input-group input {
 	width: 100%;
 	padding: 5px;
-    border: none;
-    border-bottom: 1px solid #000000;
+	border: none;
+	border-bottom: 1px solid #000000;
 }
 .contact-form textarea {
 	margin-top: 0.8em;
@@ -97,7 +94,7 @@ body {
 	font-size: 14px;
 }
 
-.message label{
+.message label {
 	font-size: 14px;
 }
 .btn {
@@ -142,7 +139,12 @@ body {
 	border-radius: 15px;
 	border: 0px;
 	font-weight: 600;
-	background-image: linear-gradient(45deg, black 0%, #202b89 60%, #202b89 100%);
+	background-image: linear-gradient(
+		45deg,
+		black 0%,
+		#202b89 60%,
+		#202b89 100%
+	);
 	cursor: pointer;
 }
 
@@ -157,7 +159,6 @@ body {
 	text-decoration: none;
 	box-shadow: 0px 0px 10px 1px #202b89;
 }
-
 
 @media screen and (max-width: 960px) {
 	.container {

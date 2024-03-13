@@ -19,7 +19,7 @@ article {
 	width: 80%;
 	justify-content: center;
 	align-items: center;
-	font-family:  inter,'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+	font-family: inter, "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 
 	header {
 		display: flex;

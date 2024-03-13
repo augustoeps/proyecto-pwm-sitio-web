@@ -1,81 +1,76 @@
 * {
-    margin: 0%;
-    padding: 0%;
+	margin: 0%;
+	padding: 0%;
 }
 
-main{
-    margin-top: 45%;
-    margin-bottom: 20%;
-    font-family:  inter,'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+main {
+	margin-top: 45%;
+	margin-bottom: 20%;
+	font-family: inter, "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 
-main h1{
-    text-align: center;
-    font-size: 2em;
+main h1 {
+	text-align: center;
+	font-size: 2em;
 }
 
-.card{
-    background: #FFFFFF;
-    box-shadow: 0px 100px 145px rgba(0, 0, 0, 0.25);
-    border-radius: 25px;
-    display: inline-flexbox;
-    margin-top: 3em;
-    padding: 1.5em;
+.card {
+	background: #ffffff;
+	box-shadow: 0px 100px 145px rgba(0, 0, 0, 0.25);
+	border-radius: 25px;
+	display: inline-flexbox;
+	margin-top: 3em;
+	padding: 1.5em;
 
+	header {
+		h2 {
+			font-size: 1.3em;
+			padding-bottom: 5%;
+		}
+	}
 
-    header{
-        h2{
-            font-size: 1.3em;
-            padding-bottom: 5%;
-        }
-    }
+	p {
+		font-size: 1em;
+	}
 
-    p{
-        font-size: 1em;
-    }
-
-    em{
-        padding-left: 10%;
-        height: 20px;
-    }
-
+	em {
+		padding-left: 10%;
+		height: 20px;
+	}
 }
 
-
-.data{
-    display: flex;
-    flex-direction: column;
+.data {
+	display: flex;
+	flex-direction: column;
 }
 
-
-.information{
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: center;
-    gap: 10em;
+.information {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	justify-content: center;
+	gap: 10em;
 }
 
+#social {
+	background-color: black;
+	align-content: center;
+	width: 8em;
+	height: 2em;
+	display: flex;
+	gap: 12%;
+	margin-left: 6%;
 
-#social{
-    background-color: black;
-    align-content: center;
-    width: 8em;
-    height: 2em;
-    display: flex;
-    gap: 12%;
-    margin-left: 6%;
-
-    img{
-        width: 2em;
-        height: 2em;
-    }
+	img {
+		width: 2em;
+		height: 2em;
+	}
 }
 
-#address{
-    width: 260px;
-    height: 260px;
-    margin-top: 0%;
-    margin-bottom: 2em;
-    padding: 0%;
+#address {
+	width: 260px;
+	height: 260px;
+	margin-top: 0%;
+	margin-bottom: 2em;
+	padding: 0%;
 }
