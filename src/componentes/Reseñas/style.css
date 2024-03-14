@@ -7,16 +7,16 @@ body{
 	font-family: inter, "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 
-.header-reseña {
-	display: inline-flex;
-}
-
-.user-image {
-	height: 4em;
-	width: 4em;
-	margin-top: 1em;
-	margin-left: 1em;
-	border-radius: 50%;
+.reviews{
+	width: auto;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	row-gap: 5em;
+	justify-content: center;
+	align-content: center;
+	margin-top: 1.2em;
+	margin-bottom: 2em;
 }
 
 .title {
@@ -26,51 +26,48 @@ body{
 	margin-bottom: 1.2em;
 }
 
-.reviews {
+.card {
 	display: flex;
-	flex-wrap: wrap;
-	row-gap: 5em;
-	flex-direction: row;
+	background: #ffffff;
+	box-shadow: 0 100px 145px rgba(0, 0, 0, 0.25);
+	border-radius: 1em;
+	display: block;
+	width: 22em;
 	justify-content: center;
-	align-content: center;
-	margin-top: 1.2em;
-	margin-bottom: 2em;
+	align-items: center;
+	padding: 0.5em;
+	margin: 0 6%;
+}
+
+.header-review{
+	display: flex;
+	flex-direction: row;
+	column-gap: 1em;
+	align-items: center;
+	justify-content: center;
+	padding-top: 3%;
+
+	h2 {
+		text-align: center;
+		font-size: 1em;
+	}
+
+	.user-image {
+		height: 4em;
+		width: 4em;
+		border-radius: 50%;
+	}
+
+	.stars {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		list-style: none;
+		width: 80px;
+	}
 }
 
 .comment {
 	padding: 1em;
 }
 
-.card {
-	background: #ffffff;
-	box-shadow: 0 100px 145px rgba(0, 0, 0, 0.25);
-	border-radius: 1em;
-	display: inline-block;
-	width: 22em;
-	justify-content: center;
-	align-items: center;
-	font-family: inter, "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-	padding: 0.1em;
-	margin-right: 7%;
-	margin-left: 5%;
-
-	header {
-		display: flex;
-		align-items: center;
-		justify-content: space-between;
-		padding-top: 3%;
-
-		h2 {
-			text-align: center;
-			font-size: 1em;
-			padding-left: 5%;
-		}
-	}
-}
-
-.stars {
-	list-style: none;
-	display: inline-flex;
-	width: 80px;
-	margin-right: 2em;
-}
