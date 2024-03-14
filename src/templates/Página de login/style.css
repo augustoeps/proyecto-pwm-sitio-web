@@ -8,22 +8,30 @@ body {
 	align-items: center;
 	justify-content: center;
 	min-height: 70vh;
-	background-image: url("../../../resources/background-pattern.webp");
 	background-repeat: repeat-y;
 	background-size: cover;
 }
 
 form {
-	margin-top: 1.5em;
+	margin-top: 10em;
 	background-color: #fff;
-	max-width: 350px;
+	max-width: 23em;
 	width: 100%;
-	border-radius: 25px;
+	border-radius: 1em;
 	padding: 30px;
 	box-shadow: 0px 0px 80px rgba(0, 0, 0, 1);
 	text-align: center;
 	box-sizing: border-box;
 	font-family: inter, "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+
+	a{
+		margin-top: 1.2em;
+		color: grey;
+		display: flex;
+		justify-content: center;
+		text-underline-offset: 0.4em;
+		text-decoration: underline grey 0.1em;
+	}
 }
 
 .input-group {
@@ -90,22 +98,6 @@ input:focus::placeholder {
 	box-shadow: none;
 }
 
-.truck-image {
-	position: absolute;
-	right: 0;
-	bottom: 0;
-	z-index: -3;
-	aspect-ratio: 152/109;
-	max-width: 360px;
-}
-
-#right-truck {
-	left: 0;
-	transform: scaleX(-1);
-}
-
-@media only screen and (max-width: 720px) {
-	#right-truck {
-		display: none;
-	}
+.header .user-button{
+	display: none;
 }
