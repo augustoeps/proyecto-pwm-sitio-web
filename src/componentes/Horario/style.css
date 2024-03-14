@@ -38,12 +38,14 @@ main h1 {
 }
 
 .information {
-	margin-top: 3em;
+	margin-top: 3.4em;
+	padding: 0em 2em;
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: center;
 	column-gap: 12em;
 	row-gap: 3.5em;
+	column-gap: 15%;
 }
 
 .data {
