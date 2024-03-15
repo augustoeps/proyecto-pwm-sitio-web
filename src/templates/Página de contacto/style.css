@@ -1,8 +1,12 @@
-body {
-	font-family: inter, "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+*{
 	margin: 0;
 	padding: 0;
 }
+
+body {
+	font-family: inter, "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
 .container {
 	display: flex;
 
@@ -14,89 +18,96 @@ body {
 	background: rgb(33, 43, 137);
 	color: white;
 	text-align: center;
-	border-radius: 10px 0 0 10px;
-	padding: 0 3%;
+	border-radius: 1em 0 0 1em;
+	padding: 0 1.5em;
 	display: flex;
 	flex-direction: column;
 	box-shadow: 0 10px 145px rgba(0, 0, 0, 0.25);
-	font-size: 14px;
+	font-size: 0.9em;
 
 	em {
 		font-family: inter, "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 		font-style: normal;
 		font-weight: 400;
-		margin-left: 10px;
+		margin-left: 1em;
 	}
 }
 
 .contact-form {
 	background: white;
-	border-radius: 0 10px 10px 0;
-	padding: 0px 30px;
+	border-radius: 0 1em 1em 0;
+	padding: 0.5em 1em;
 	box-shadow: 0 10px 145px rgba(0, 0, 0, 0.25);
 	align-content: center;
-	display: grid;
+	display: flex;
+	flex-direction: column;
 }
 
 .contact-form textarea {
-	width: 100%;
-	padding: 10px;
-	border-radius: 5px;
+	width: 90%;
+	padding: 1em;
+	border-radius: 1em;
 	border: 1px solid #ced4da;
+}
+.title{
+	margin-top: 1em;
 }
 
 .subtitle {
-	margin-top: 2px;
+	font-size: 0.8em;
 }
 
 .info {
+	margin-top: 6em;
 	display: flex;
 	flex-direction: column;
-	margin-right: 1.3em;
-	margin-bottom: 10%;
-}
-
-.info i {
-	margin-top: 50px;
+	row-gap: 4em;
+	margin-right: 1.6em;
 }
 
 .input-group {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-content: center;
 	margin-bottom: 2em;
 }
 
 .input-group label {
-	display: block;
-	font-size: 14px;
+	font-size: 0.9em;
 	margin-top: 1em;
 	margin-bottom: 1em;
 }
 
 .input-group input {
-	width: 100%;
+	width: 95%;
 	padding: 5px;
 	border: none;
+	outline: none;
 	border-bottom: 1px solid #000000;
 }
+
 .contact-form textarea {
 	margin-top: 0.8em;
 	resize: none;
 }
 .radio-group {
 	display: flex;
-	justify-content: space-between;
-	margin-bottom: 1rem;
+	column-gap: 1em;
+	justify-content: center;
+	align-items: center;
+	margin-bottom: 2em;
 }
 .radio-group label {
 	display: flex;
 	flex-direction: row;
-	margin-left: 1em;
-	margin-bottom: 1em;
-	font-size: 14px;
+	font-size: 0.9em;
 }
 
 .message label {
-	font-size: 14px;
+	font-size: 0.9em;
 }
+
 .btn {
 	display: block;
 	width: 100%;
@@ -122,11 +133,15 @@ body {
 }
 
 .social-icons {
-	margin-top: 14em;
+	margin-top: 16em;
 	justify-content: center;
 	display: flex;
 	flex-direction: row;
-	gap: 6%;
+	gap: 1em;
+}
+
+.icon{
+	width: 2.5em;
 }
 
 .submit-button {
@@ -160,25 +175,37 @@ body {
 	box-shadow: 0px 0px 10px 1px #202b89;
 }
 
-@media screen and (max-width: 960px) {
+@media screen and (max-width: 600px) {
 	.container {
 		flex-direction: column;
 		align-items: stretch;
 	}
 	.contact-info,
 	.contact-form {
-		width: 100%;
 		max-width: none;
 		border-radius: 0;
 	}
+
 	.contact-info {
-		border-bottom-left-radius: 10px;
-		border-bottom-right-radius: 10px;
+		height: 20em;
+		border-bottom-left-radius: 1em;
+		border-bottom-right-radius: 1em;
 		order: 2;
 	}
+
 	.contact-form {
-		border-top-left-radius: 10px;
-		border-top-right-radius: 10px;
+		border-top-left-radius: 1em;
+		border-top-right-radius: 1em;
 		order: 1;
+	}
+
+
+	.info{
+		margin-top: 3em;
+		row-gap: 1.5em;
+	}
+
+	.social-icons{
+		margin-top: 2.5em;
 	}
 }
