@@ -1,12 +1,13 @@
+
 document.addEventListener("DOMContentLoaded", async function () {
 	await cargarEstructura();
-	await cargarFuncionalidad();
 });
 
 async function cargarEstructura() {
 	let appBody = document.querySelector("body");
 	await cargarComponente(appBody, "../../componentes/Cabecera/");
 	await cargarComponente(appBody, "../../componentes/Servicios/");
+	await cargarFuncionalidad();
 	await cargarComponente(appBody, "../../componentes/Footer/");
 }
 
@@ -37,6 +38,7 @@ async function cargarEstilo(url) {
 async function cargarFuncionalidad() {
 	let appBody = document.querySelector("html");
 	await cargarScript(appBody, "../../componentes/Cabecera/");
+	await cargarScript(appBody, "../../componentes/Servicios/");
 }
 
 async function cargarScript(body, url) {
