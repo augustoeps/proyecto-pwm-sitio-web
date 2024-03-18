@@ -1,0 +1,7 @@
+{"data":
+[
+  {"id":1,"attributes":{"Nombre":"Javier","Comentario":"Gran servicio, muy buena atención al cliente.","Valoracion":4,"createdAt":"2024-03-11T11:53:26.906Z","updatedAt":"2024-03-14T09:28:48.577Z","publishedAt":"2024-03-14T09:11:18.881Z"}},
+  {"id":2,"attributes":{"Nombre":"Irene","Comentario":"Rápida atención y buena calidad.","Valoracion":4.5,"createdAt":"2024-03-14T09:29:57.960Z","updatedAt":"2024-03-14T09:29:59.012Z","publishedAt":"2024-03-14T09:29:59.005Z"}},
+  {"id":3,"attributes":{"Nombre":"Giovanni","Comentario":"Muy buen ambiente y rápidos en los servicios.","Valoracion":5,"createdAt":"2024-03-14T09:32:10.288Z","updatedAt":"2024-03-14T09:32:11.410Z","publishedAt":"2024-03-14T09:32:11.405Z"}},
+  {"id":4,"attributes":{"Nombre":"Augusto","Comentario":"Atención ideal y buen ambiente.","Valoracion":3.5,"createdAt":"2024-03-14T09:33:35.126Z","updatedAt":"2024-03-14T09:33:36.042Z","publishedAt":"2024-03-14T09:33:36.036Z"}}
+],"meta":{"pagination":{"page":1,"pageSize":25,"pageCount":1,"total":4}}}
