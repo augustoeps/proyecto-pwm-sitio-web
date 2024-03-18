@@ -1,13 +1,13 @@
 
 document.addEventListener("DOMContentLoaded", async function () {
 	await cargarEstructura();
+	await cargarFuncionalidad();
 });
 
 async function cargarEstructura() {
 	let appBody = document.querySelector("body");
 	await cargarComponente(appBody, "../../componentes/Cabecera/");
 	await cargarComponente(appBody, "../../componentes/Servicios/");
-	await cargarFuncionalidad();
 	await cargarComponente(appBody, "../../componentes/Footer/");
 }
 

@@ -29,6 +29,7 @@ body {
 
 .card-container {
 	display: inline-flex;
+	min-height: 20em;
 	flex-wrap: wrap;
 	gap: 100px;
 	justify-content: center;
