@@ -6,7 +6,7 @@ async function cargarTarjetas(){
     const servicios =  await json.data
     const cardContainer = document.getElementById("container")
 
-    console.log(servicios)
+
     for (const servicio of servicios){
         const attributes=servicio.attributes
 
