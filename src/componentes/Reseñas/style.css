@@ -32,7 +32,7 @@ body{
 	box-shadow: 0 100px 145px rgba(0, 0, 0, 0.25);
 	border-radius: 1em;
 	display: block;
-	width: 22em;
+	min-width: 22em;
 	justify-content: center;
 	align-items: center;
 	padding: 0.5em;
@@ -42,14 +42,15 @@ body{
 .header-review{
 	display: flex;
 	flex-direction: row;
-	column-gap: 1em;
+	column-gap: 2em;
 	align-items: center;
-	justify-content: center;
 	padding-top: 3%;
+	padding-left: 5%;
 
 	h2 {
 		text-align: center;
 		font-size: 1em;
+		padding-left: 5%;
 	}
 
 	.user-image {
