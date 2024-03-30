@@ -5,7 +5,7 @@ async function cargarReseñas(){
     const reviews =  await json.data
     const reviewsContainer = document.getElementById("reviews")
 
-    console.log(reviews)
+
     let count = 0
     for (const review of reviews){
         const attributes= review.attributes
@@ -28,7 +28,6 @@ async function cargarReseñas(){
 				</p>
         `
         reviewsContainer.appendChild(tarjetaReview)
-        console.log(count)
         const stars = document.getElementById(`stars${count}`)
         count++
         for (let i = 0; i < attributes.Valoracion; i++){
@@ -36,6 +35,5 @@ async function cargarReseñas(){
             star.src ="../../../resources/Vector.webp"
             stars.appendChild(star)
         }
-
     }
 }

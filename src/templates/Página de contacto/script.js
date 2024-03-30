@@ -42,3 +42,7 @@ async function cargarScript(body, url) {
 	scriptElement.src = url + "script.js";
 	body.appendChild(scriptElement);
 }
+
+async function cargaInfoTaller(){
+
+}
