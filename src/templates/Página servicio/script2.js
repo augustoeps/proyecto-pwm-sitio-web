@@ -37,6 +37,7 @@ async function cargarEstilo(url) {
 async function cargarFuncionalidad() {
 	let appBody = document.querySelector("html");
 	await cargarScript(appBody, "../../componentes/Cabecera/");
+	await cargarInfoServicio()
 }
 
 async function cargarScript(body, url) {
@@ -44,3 +45,18 @@ async function cargarScript(body, url) {
 	scriptElement.src = url + "script.js";
 	body.appendChild(scriptElement);
 }
+
+async function cargarInfoServicio(){
+	const response =  await fetch("../../../resources/jsons/Servicios.json")
+	const json = await response.json()
+	const servicios =  await json.data
+	const ServiceTitleElement = document.getElementById("service")
+	const PriceElement = document.getElementById("price")
+	const DescriptionElement = document.getElementById("Description")
+	const attributes = servicios[1].attributes
+
+	ServiceTitleElement.innerText = attributes.Title
+	PriceElement.innerText = attributes.Precio
+	DescriptionElement.innerText = attributes.Descripcion
+}
+

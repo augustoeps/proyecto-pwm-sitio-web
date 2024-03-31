@@ -12,7 +12,8 @@ async function cargarTarjetas(){
 
         const tarjeta = document.createElement("a")
         tarjeta.classList.add("card")
-        tarjeta.href = "../../templates/Página servicio/index.html"
+        tarjeta.href = `../../templates/Página servicio/index${servicio.id}.html`
+        tarjeta.setAttribute("service-info",`${servicio.id}`)
 
         tarjeta.innerHTML = `
             <img src="${attributes.imagen}" alt="Imagen de servicio" />
