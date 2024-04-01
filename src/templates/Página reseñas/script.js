@@ -42,6 +42,6 @@ async function cargarFuncionalidad() {
 
 async function cargarScript(body, url) {
 	const scriptElement = document.createElement("script");
-	scriptElement.src = url + "script1.js";
+	scriptElement.src = url + "script.js";
 	body.appendChild(scriptElement);
 }
