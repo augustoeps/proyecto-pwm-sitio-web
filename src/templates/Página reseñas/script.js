@@ -37,6 +37,7 @@ async function cargarEstilo(url) {
 async function cargarFuncionalidad() {
 	let appBody = document.querySelector("html");
 	await cargarScript(appBody, "../../componentes/Cabecera/");
+	await cargarScript(appBody, "../../componentes/Reseñas/");
 }
 
 async function cargarScript(body, url) {

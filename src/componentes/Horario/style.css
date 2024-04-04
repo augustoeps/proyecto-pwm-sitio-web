@@ -1,81 +1,79 @@
 * {
-    margin: 0%;
-    padding: 0%;
+	margin: 0%;
+	padding: 0%;
 }
 
-main{
-    margin-top: 45%;
-    margin-bottom: 20%;
-    font-family:  inter,'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+main {
+	margin-top: 45%;
+	font-family: inter, "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 
-main h1{
-    text-align: center;
-    font-size: 2em;
+.title {
+	text-align: center;
+	font-size: 2.5em;
+	margin-top: 3.5em;
+	margin-bottom: 1.2em;
 }
 
-.card{
-    background: #FFFFFF;
-    box-shadow: 0px 100px 145px rgba(0, 0, 0, 0.25);
-    border-radius: 25px;
-    display: inline-flexbox;
-    margin-top: 3em;
-    padding: 1.5em;
+.card {
+	background: #ffffff;
+	box-shadow: 0px 100px 145px rgba(0, 0, 0, 0.25);
+	border-radius: 25px;
+	display: inline-flexbox;
+	padding: 1.5em;
 
+	header {
+		h2 {
+			font-size: 1.3em;
+			padding-bottom: 5%;
+		}
+	}
 
-    header{
-        h2{
-            font-size: 1.3em;
-            padding-bottom: 5%;
-        }
-    }
+	p {
+		font-size: 1em;
+	}
 
-    p{
-        font-size: 1em;
-    }
-
-    em{
-        padding-left: 10%;
-        height: 20px;
-    }
-
+	em {
+		padding-left: 10%;
+		height: 20px;
+	}
 }
 
-
-.data{
-    display: flex;
-    flex-direction: column;
+.information {
+	margin-top: 3.4em;
+	padding: 0em 2em;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	column-gap: 12em;
+	row-gap: 3.5em;
+	column-gap: 15%;
 }
 
-
-.information{
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: center;
-    gap: 10em;
+.data {
+	display: flex;
+	flex-direction: column;
+	row-gap: 3.5em;
+	justify-items: center;
 }
 
+#social {
+	display: flex;
+	align-content: center;
+	background-color: black;
+	width: 8em;
+	height: 2em;
+	gap: 1em;
+	margin: auto;
 
-#social{
-    background-color: black;
-    align-content: center;
-    width: 8em;
-    height: 2em;
-    display: flex;
-    gap: 12%;
-    margin-left: 6%;
-
-    img{
-        width: 2em;
-        height: 2em;
-    }
+	img {
+		width: 2em;
+		height: 2em;
+	}
 }
 
-#address{
-    width: 260px;
-    height: 260px;
-    margin-top: 0%;
-    margin-bottom: 2em;
-    padding: 0%;
+#address {
+	margin: auto 0;
+	padding: 0;
+	width: 20em;
 }

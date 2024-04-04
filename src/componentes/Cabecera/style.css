@@ -4,25 +4,30 @@
 }
 
 .header {
-	position: fixed;
-	top: 0;
+	position: absolute;
+	top: 2em;
 	width: 100%;
 	align-items: center;
 	justify-content: center;
-	display: inline-flex;
+	display: flex;
+	flex-direction: row;
 	flex-wrap: wrap;
+	z-index: 1;
 }
 
 .container {
-	width: 60%;
+	position: fixed;
+	top: 0.63em;
+	width: 25em;
+	height: 2.5em;
 	display: flex;
 	align-items: center;
-	margin: 1em auto;
 	transition: 0.5s;
 	background-size: 200% auto;
 	color: white;
-	border-radius: 15px;
+	border-radius: 2em;
 	border: 0px;
+	z-index: 3;
 	background-image: linear-gradient(
 		45deg,
 		rgb(0, 0, 0) 0%,
@@ -37,6 +42,7 @@
 
 nav {
 	width: 100%;
+	height: 100%;
 	display: inline-flex;
 	flex-wrap: wrap;
 	align-items: center;
@@ -44,19 +50,21 @@ nav {
 
 	ul {
 		width: 100%;
+		height: 100%;
 		display: inline-flex;
 		flex-wrap: wrap;
 		text-align: center;
 		align-items: center;
 		justify-content: center;
 		list-style: none;
-		gap: 5%;
+		column-gap: 2em;
+		font-weight: 600;
 	}
 }
 
 nav .header-text-element {
 	color: rgb(255, 255, 255);
-	font-size: 14px;
+	font-size: 0.9em;
 	font-weight: 600;
 	font-family: inter, "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 	text-decoration: none;
@@ -69,40 +77,116 @@ nav .header-text-element {
 }
 
 #logo-img {
-	margin-left: 30px;
-	height: 50px;
+	position: absolute;
+	top: -1.5em;
+	left: -0.5em;
+	padding-left: 2.5em;
+	height: 3em;
+	width: 5em;
 }
 
 #header-button {
+	z-index: 2;
 	display: none;
+	position: fixed;
+	top: 0.22em;
+	right: 0.5em;
+	font-size: 2.5em;
+	background-color: rgb(0, 0, 0, 0%);
+	border: none;
+	transition: transform 1s;
 }
 
-@media screen and (max-width: 960px) {
-	#header-button {
-		display: block;
-		position: fixed;
-		top: 2%;
-		right: 1.2em;
-		font-size: 2em;
-		background-color: rgb(0, 0, 0, 0%);
-		border: none;
-		transition: transform 1s;
+#header-button:hover {
+	transform: rotate(90deg);
+}
+
+
+.user-button{
+	align-items: center;
+	text-align: center;
+	font-family: inter, "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	position: absolute;
+	column-gap: 1.5em;
+	right: 2em;
+}
+
+
+.user-button a{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	text-decoration: none;
+	color: black;
+	border-radius: 1em;
+	font-size: 0.9em;
+	padding: 0.5em 0.8em;
+	box-shadow: 0px 0.3em 1.8em rgba(0, 0, 0, 0.25);
+	font-weight: 600;
+}
+
+#register-button {	
+	right: 2em;
+	background-color: aliceblue;
+}
+
+#login-button {	
+	right: 11em;
+	background-color: rgb(32, 43, 137);
+	color: aliceblue;
+}
+
+@media screen and (max-width: 1050px) and (min-width: 800px) {
+	.container {
+		height: 3em;
+		width: 28em;
 	}
 
-	#header-button:hover {
-		transform: rotate(90deg);
+	#logo-img{
+		display: none;
+	}
+
+	nav ul {
+		column-gap: 3.5em;
+	}
+
+	.header{
+		position: absolute;
+		top: 6em;
+	}
+	.user-button{
+		right: initial;
+	}
+
+}
+
+@media screen and (max-width: 800px) {
+	#header-button {
+		display: block;
+	}
+
+	#logo-img{
+		display: none;
+	}
+
+	.user-button{
+		right: initial;
 	}
 
 	.container {
-		position: fixed;
-		top: 5%;
-		right: -200px;
-		width: fit-content;
+		top: 0;
+		margin: 0;
+		border-radius: 0;
+		right: -100em;
+		width: 100%;
+		height: 100%;
 		align-items: center;
 		justify-content: center;
-		display: flex;
-		flex-wrap: wrap;
 		flex-direction: column;
+		font-size: 2em;
 
 		img {
 			display: none;
@@ -112,35 +196,28 @@ nav .header-text-element {
 			display: flex;
 			flex-wrap: wrap;
 			flex-direction: column;
-			row-gap: 1em;
-			padding: 10%;
+			justify-content: center;
+			row-gap: 3em;
 		}
 	}
 
 	@keyframes header-animation-right {
-		0% {
-			transform: translateX(-210px);
-		}
 		100% {
 			transform: translateX(0);
 		}
 	}
 
 	@keyframes header-animation-left {
-		0% {
-			transform: translateX(0);
-		}
 		100% {
-			transform: translateX(-210px);
+			transform: translateX(-100em);
 		}
 	}
 
 	.header-animated-right {
-		animation: header-animation-right 1s linear;
+		animation: header-animation-right 0.5s linear;
 	}
 
-
 	.header-animated-left {
-		animation: header-animation-left 1s linear;
+		animation: header-animation-left 0.5s linear;
 	}
 }

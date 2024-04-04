@@ -3,9 +3,9 @@
 	margin: 0px;
 }
 
-body {
-	width: 100%;
+body{
 	height: 100%;
+	width: 100%;
 }
 
 #background-img {
@@ -22,5 +22,5 @@ body {
 	text-align: center;
 	margin-top: 20%;
 	font-size: 30px;
-	font-family: Inter;
+	font-family: inter, "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }

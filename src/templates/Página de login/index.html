@@ -1,16 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
 	<head>
+		<script src="script.js"></script>
 		<link rel="stylesheet" href="style.css" />
 		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<title>Formulario</title>
 	</head>
 
 	<body>
-		<form >
+		<form>
 			<h2>Inicia Sesión</h2>
-
 			<div class="input-group">
 				<input
 					type="email"
@@ -19,7 +20,6 @@
 					placeholder="Correo Electronico"
 					required
 					pattern="[a-z0-9._%+\-]+@[a-z0-9.\-]+\.[a-z]{2,}$"
-					title="Correo Electronico"
 				/>
 				<input
 					type="password"
@@ -28,14 +28,13 @@
 					placeholder="Contraseña"
 					required
 				/>
-				<input class="submit-button" type="submit" value="Iniciar Sesión" />
+				<input
+					class="submit-button"
+					type="submit"
+					value="iniciar sesión"
+				/>
 			</div>
+			<a href="../Página de registro/index.html">Crear cuenta</a>
 		</form>
-		<img class="truck-image" src="../../../resources/truck.webp" />
-		<img
-			class="truck-image"
-			id="right-truck"
-			src="../../../resources/truck.webp"
-		/>
 	</body>
 </html>
