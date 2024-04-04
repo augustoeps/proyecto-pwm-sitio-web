@@ -1,0 +1,74 @@
+* {
+	margin: 0%;
+	padding: 0%;
+}
+
+body{
+	font-family: inter, "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.reviews{
+	width: auto;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	row-gap: 5em;
+	justify-content: center;
+	align-content: center;
+	margin-top: 1.2em;
+	margin-bottom: 2em;
+}
+
+.title {
+	text-align: center;
+	font-size: 2.5em;
+	margin-top: 3.5em;
+	margin-bottom: 1.2em;
+}
+
+.card {
+	display: flex;
+	background: #ffffff;
+	box-shadow: 0 100px 145px rgba(0, 0, 0, 0.25);
+	border-radius: 1em;
+	display: block;
+	min-width: 22em;
+	justify-content: center;
+	align-items: center;
+	padding: 0.5em;
+	margin: 0 6%;
+}
+
+.header-review{
+	display: flex;
+	flex-direction: row;
+	column-gap: 2em;
+	align-items: center;
+	padding-top: 3%;
+	padding-left: 5%;
+
+	h2 {
+		text-align: center;
+		font-size: 1em;
+		padding-left: 5%;
+	}
+
+	.user-image {
+		height: 4em;
+		width: 4em;
+		border-radius: 50%;
+	}
+
+	.stars {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		list-style: none;
+		width: 80px;
+	}
+}
+
+.comment {
+	padding: 1em;
+}
+

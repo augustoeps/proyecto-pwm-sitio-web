@@ -1,0 +1,56 @@
+<header class="header">
+  <img
+    id="logo-img"
+    alt="logo"
+    src="../../../resources/logo.svg"
+  />
+  <div #header class="container" [ngClass]="this.animationClass">
+    <nav>
+      <ul>
+        <li>
+          <a
+            href="../../templates/Página principal/index.html"
+            class="header-text-element"
+            >Inicio</a
+          >
+        </li>
+        <li>
+          <a
+            href="../../templates/Página de servicios/index.html"
+            class="header-text-element"
+            >Servicios</a
+          >
+        </li>
+        <li>
+          <a
+            href="../../templates/Página de contacto/index.html"
+            class="header-text-element"
+            >Contacto</a
+          >
+        </li>
+        <li>
+          <a
+            href="../../templates/Página reseñas/index.html"
+            class="header-text-element"
+            >Reseñas</a
+          >
+        </li>
+      </ul>
+    </nav>
+  </div>
+  <div class="user-button">
+    <a
+      href="../../templates/Página de login/index.html"
+      id="login-button"
+    >
+      Iniciar sesión
+    </a>
+    <a
+      href="../../templates/Página de registro/index.html"
+      id="register-button"
+    >
+      Registrarse
+    </a>
+  </div>
+</header>
+<button #header_button (click)="changeHeaderVisibility()"  id="header-button">≡</button>
