@@ -1,0 +1,17 @@
+
+#background-img {
+	position: absolute;
+	width: 100%;
+	top: 0;
+	left: 0;
+	aspect-ratio: 3/2;
+	z-index: -1;
+}
+
+.titles {
+	margin: auto;
+	text-align: center;
+	margin-top: 20%;
+	font-size: 30px;
+	font-family: inter, "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
