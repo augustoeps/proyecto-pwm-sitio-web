@@ -6,7 +6,7 @@ import { CabeceraComponent } from '../global-components/header/cabecera.componen
 import { BrowserModule } from '@angular/platform-browser';
 import { FooterComponent } from '../global-components/footer/footer.component';
 import { ScheduleInfoComponent } from './components/schedule-info/schedule-info.component';
-import { DataLoader } from './components/schedule-info/dataloader';
+import { DataLoader } from './components/schedule-info/DataLoader';
 
 @NgModule({
 	imports: [CommonModule, RouterOutlet, BrowserModule],
