@@ -5,11 +5,14 @@ import { RouterOutlet } from '@angular/router';
 import { CabeceraComponent } from '../global-components/header/cabecera.component';
 import { BrowserModule } from '@angular/platform-browser';
 import { FooterComponent } from '../global-components/footer/footer.component';
+import { ScheduleInfoComponent } from './components/schedule-info/schedule-info.component';
+import { DataLoader } from './components/schedule-info/dataloader';
 
 @NgModule({
 	imports: [CommonModule, RouterOutlet, BrowserModule],
 	exports: [AppComponent],
-	declarations: [AppComponent, CabeceraComponent, FooterComponent],
+	providers: [DataLoader],
+	declarations: [AppComponent, CabeceraComponent, FooterComponent, ScheduleInfoComponent],
 	bootstrap: [AppComponent],
 })
 export class MainPageModule {}
