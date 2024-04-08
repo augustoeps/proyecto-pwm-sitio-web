@@ -1,18 +1,13 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { AppComponent } from './página principal/app.component';
+import { MainPageModule } from './main-page/main-pagel.module';
 import { RouterOutlet } from '@angular/router';
-import { CabeceraComponent } from './componentes/cabecera/cabecera.component';
 import { BrowserModule } from '@angular/platform-browser';
-import { FooterComponent } from './componentes/footer/footer.component';
+import { AppComponent } from './main-page/app.component';
 
 @NgModule({
-  imports: [
-    CommonModule,
-    RouterOutlet,
-    BrowserModule
-  ],
-  declarations: [AppComponent, CabeceraComponent, FooterComponent],
-  bootstrap: [AppComponent]
+	imports: [CommonModule, RouterOutlet, BrowserModule, MainPageModule],
+	declarations: [],
+	bootstrap: [AppComponent],
 })
-export class MainModuleModule { }
+export class MainModuleModule {}
