@@ -1,14 +1,11 @@
-import { Attribute } from '@angular/core';
-import { Observable } from './Observable';
-import { Observer } from './Observer';
+import { CompletionObserver, Subscribable, Unsubscribable } from 'rxjs';
 
-export class DataLoader implements Observable {
-
+export class DataLoader implements Subscribable<any>, Unsubscribable {
 	private schedule!: string;
 	private address!: string;
 	private phone!: string;
-	observers: Observer[];
-    email: any;
+	private email!: string;
+	observers: CompletionObserver<any>[];
 
 	constructor() {
 		this.observers = [];
@@ -16,19 +13,9 @@ export class DataLoader implements Observable {
 			this.schedule = attributes.Horario;
 			this.address = attributes.Direccion;
 			this.phone = attributes.Telefono;
-            this.email = attributes.Correo
-			this.notifyObservers();
+			this.email = attributes.Correo;
+            this.notify()
 		});
-	}
-
-	notifyObservers(): void {
-		for (let observer of this.observers) {
-			observer.ObsExecute();
-		}
-	}
-
-	addObserver(Observer: Observer): void {
-		this.observers.push(Observer);
 	}
 
 	private async loaddata() {
@@ -38,6 +25,21 @@ export class DataLoader implements Observable {
 		const json = await response.json();
 		const InfoTaller = await json.data;
 		return InfoTaller.attributes;
+	}
+
+	private notify() {
+		this.observers.forEach((observer: CompletionObserver<any>) => {
+			observer.complete();
+		});
+	}
+
+	subscribe(observer: CompletionObserver<any>): Unsubscribable {
+		this.observers.push(observer);
+		return this;
+	}
+
+	unsubscribe(): void {
+		console.log('Observer unsuscribed');
 	}
 
 	getSchedule() {
@@ -52,7 +54,7 @@ export class DataLoader implements Observable {
 		return this.phone;
 	}
 
-    getEmail(): any {
-		return this.email
+	getEmail(): any {
+		return this.email;
 	}
 }
