@@ -1,4 +1,6 @@
-<div *ngFor="let service of infoservices">
-  <app-card-service [Titulo]="service.Title" [Precio]="service.Precio" [Imagen]="service.imagen" ] ></app-card-service>
-</div>
-
+<h1 class="title">Servicios</h1>
+<section class="card-container" id="container">
+  <div *ngFor="let service of infoservices">
+      <app-card-service [Titulo]="service.attributes.Title" [Precio]="service.attributes.Precio" [Imagen]="service.attributes.imagen"></app-card-service>
+  </div>
+</section>

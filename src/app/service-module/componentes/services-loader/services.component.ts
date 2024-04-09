@@ -6,17 +6,18 @@ import { Component } from '@angular/core';
   styleUrl: './services.component.css'
 })
 export class ServicesComponent {
-  infoservices;
+  infoservices!: any[];
   constructor() {
-    this.infoservices =  this.loadjsons()
+    this.loadjsons().then(res => {
+      this.infoservices = res;
+    });
   }
-  private async loadjsons (): Promise<JSON> {
+  private async loadjsons (): Promise<any[]> {
     const response =  await fetch("../../../../assets/Servicios.json")
     const json = await response.json()
     const services =  await json.data
     return services;
   }
-
 }
 
 
