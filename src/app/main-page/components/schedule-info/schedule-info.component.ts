@@ -1,28 +1,26 @@
 import { Component } from '@angular/core';
 import { DataLoader } from './DataLoader';
-import { CompletionObserver } from 'rxjs';
 
 @Component({
 	selector: 'app-schedule-info',
 	templateUrl: './schedule-info.component.html',
 	styleUrls: ['./schedule-info.component.css'],
 })
-export class ScheduleInfoComponent implements CompletionObserver<any> {
+export class ScheduleInfoComponent {
 	schedule!: string;
 	address!: string;
 	phoneNumber!: string;
 	email!: string;
-	dataloader: DataLoader;
+
 
 	constructor() {
-		this.dataloader = new DataLoader();
-		this.dataloader.subscribe(this);
+		const dataloader = new DataLoader();
+		dataloader.getData().then((attributes) => {
+			this.schedule = attributes.schedule
+			this.address = attributes.address
+			this.phoneNumber = attributes.phone
+			this.email = attributes.email
+		});
 	}
 
-	complete(): void {
-		this.schedule = this.dataloader.getSchedule();
-		this.address = this.dataloader.getAddress();
-		this.phoneNumber = this.dataloader.getPhone();
-		this.email = this.dataloader.getEmail();
-	}
 }

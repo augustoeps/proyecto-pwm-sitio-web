@@ -1,23 +1,5 @@
-import { CompletionObserver, Subscribable, Unsubscribable } from 'rxjs';
 
-export class DataLoader implements Subscribable<any>, Unsubscribable {
-	private schedule!: string;
-	private address!: string;
-	private phone!: string;
-	private email!: string;
-	observers: CompletionObserver<any>[];
-
-	constructor() {
-		this.observers = [];
-		this.loaddata().then((attributes) => {
-			this.schedule = attributes.Horario;
-			this.address = attributes.Direccion;
-			this.phone = attributes.Telefono;
-			this.email = attributes.Correo;
-            this.notify()
-		});
-	}
-
+export class DataLoader{
 	private async loaddata() {
 		const response = await fetch(
 			'../../../../assets/jsons/InfoTaller.json'
@@ -27,34 +9,13 @@ export class DataLoader implements Subscribable<any>, Unsubscribable {
 		return InfoTaller.attributes;
 	}
 
-	private notify() {
-		this.observers.forEach((observer: CompletionObserver<any>) => {
-			observer.complete();
-		});
-	}
-
-	subscribe(observer: CompletionObserver<any>): Unsubscribable {
-		this.observers.push(observer);
-		return this;
-	}
-
-	unsubscribe(): void {
-		console.log('Observer unsuscribed');
-	}
-
-	getSchedule() {
-		return this.schedule;
-	}
-
-	getAddress() {
-		return this.address;
-	}
-
-	getPhone() {
-		return this.phone;
-	}
-
-	getEmail(): any {
-		return this.email;
+	async getData(){
+		const attributes = await this.loaddata()
+		return {
+			schedule : attributes.Horario,
+			address : attributes.Direccion,
+			phone : attributes.Telefono,
+			email : attributes.Correo,
+		}
 	}
 }
