@@ -1,9 +1,5 @@
-* {
-  padding: 0px;
-  margin: 0px;
-}
 
-body {
+.container {
   font-family: inter, "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   display: flex;
   flex-direction: column;

@@ -1,18 +1,18 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { AppComponent } from './app.component';
 import { RouterOutlet } from '@angular/router';
-import { CabeceraComponent } from '../global-components/header/cabecera.component';
 import { BrowserModule } from '@angular/platform-browser';
-import { FooterComponent } from '../global-components/footer/footer.component';
 import { ScheduleInfoComponent } from './components/schedule-info/schedule-info.component';
 import { DataLoader } from './components/schedule-info/DataLoader';
+import { MainPageComponent } from './main-page.component';
+import { GlobalModule } from '../global-components/global-components.module';
 
 @NgModule({
-	imports: [CommonModule, RouterOutlet, BrowserModule],
-	exports: [AppComponent],
+	imports: [CommonModule, RouterOutlet, BrowserModule, GlobalModule],
+	exports: [MainPageComponent],
 	providers: [DataLoader],
-	declarations: [AppComponent, CabeceraComponent, FooterComponent, ScheduleInfoComponent],
-	bootstrap: [AppComponent],
+	declarations: [MainPageComponent, ScheduleInfoComponent],
+	bootstrap: [MainPageComponent],
 })
-export class MainPageModule {}
+
+export class MainPageModule { }

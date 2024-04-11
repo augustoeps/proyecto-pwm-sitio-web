@@ -13,7 +13,7 @@ export class ServicesComponent {
     });
   }
   private async loadjsons (): Promise<any[]> {
-    const response =  await fetch("../../../../assets/Servicios.json")
+    const response =  await fetch("../../../../assets/jsons/Servicios.json")
     const json = await response.json()
     const services =  await json.data
     return services;
