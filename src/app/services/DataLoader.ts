@@ -1,35 +1,54 @@
 import { Injectable } from "@angular/core";
-import { CompletionObserver, Observer, Subscribable, Unsubscribable } from "rxjs";
+import { CompletionObserver, Subscribable, Unsubscribable } from "rxjs";
 
 @Injectable()
 
-export class DataLoader  {
-  information: any;
-  private json!: Promise<any>;
+export class DataLoader implements Subscribable<any>, Unsubscribable {
+    private information!: any;
+    private observers: CompletionObserver<any>[]
 
-  constructor() {
-    this.information = this.loaddata();
+    constructor() {
+        this.loaddata().then(async json => {
+            this.information = await json
+            this.notify()
+        }).catch(err => console.error(err))
 
-  }
+        this.observers = []
+    }
+
+    private async loaddata() {
+        return (await fetch('/assets/jsons/information.json').catch()).json()
+    }
+
+    async getInfoTaller() {
+        return {
+            schedule: this.information.Infotaller.attributes.Horario,
+            address: this.information.Infotaller.attributes.Direccion,
+            phone: this.information.Infotaller.attributes.Telefono,
+            email: this.information.Infotaller.attributes.Correo
+        }
+    }
+
+    async getServicios() {
+        return this.information.Servicios
+    }
 
 
-  async getInfoTaller(){
-    console.log(this.information)
-      return {
-        schedule : this.information.Infotaller.attributes.Horario,
-        address : this.information.Infotaller.attributes.Direccion,
-        phone : this.information.Infotaller.attributes.Telefono,
-        email : this.information.Infotaller.attributes.Correo
-      }
-  }
+    subscribe(observer: CompletionObserver<any>): Unsubscribable {
+        this.observers.push(observer);
+        return this
+    }
 
-  private async loaddata() {
-    const response = await fetch(
-      '/assets/jsons/Information.json'
-    );
-     this.json =  response.json();
-    const Information = await this.json;
-    return Information;
-  }
+    private notify() {
+        this.observers.forEach(observer => {
+            observer.complete()
+        })
+    }
+
+    unsubscribe(): void {
+        this.observers = []
+        console.log('all unsubscribed')
+    }
+
 
 }

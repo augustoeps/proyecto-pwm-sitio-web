@@ -1,22 +1,22 @@
 import { Component } from '@angular/core';
+import { DataLoader } from '../../../services/DataLoader';
+import { CompletionObserver } from 'rxjs';
 
 @Component({
   selector: 'app-services-loader',
   templateUrl: './services.component.html',
   styleUrl: './services.component.css'
 })
-export class ServicesComponent {
+
+export class ServicesComponent implements CompletionObserver<any>{
   infoservices!: any[];
-  constructor() {
-    this.loadjsons().then(res => {
-      this.infoservices = res;
-    });
+  constructor(private dataloader: DataLoader) {
+    dataloader.subscribe(this)
   }
-  private async loadjsons (): Promise<any[]> {
-    const response =  await fetch("../../../../assets/jsons/Servicios.json")
-    const json = await response.json()
-    const services =  await json.data
-    return services;
+  complete(){
+    this.dataloader.getServicios().then(servicios => {
+      this.infoservices = servicios
+    })
   }
 }
 

@@ -6,6 +6,7 @@ import {ServicesComponent} from "./componentes/services-loader/services.componen
 import { CabeceraComponent } from '../global-components/header/cabecera.component';
 import { MainPageModule } from '../main-page/main-page.module';
 import { GlobalModule } from '../global-components/global-components.module';
+import { DataLoader } from '../services/DataLoader';
 
 
 
@@ -15,6 +16,7 @@ import { GlobalModule } from '../global-components/global-components.module';
     CardServiceComponent,
     ServicesComponent,
   ],
+  providers: [DataLoader],
   imports: [
     CommonModule,
     MainPageModule,
