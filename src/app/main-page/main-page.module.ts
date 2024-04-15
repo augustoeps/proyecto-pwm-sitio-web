@@ -3,7 +3,7 @@ import { CommonModule } from '@angular/common';
 import { RouterOutlet } from '@angular/router';
 import { BrowserModule } from '@angular/platform-browser';
 import { ScheduleInfoComponent } from './components/schedule-info/schedule-info.component';
-import { DataLoader } from './components/schedule-info/DataLoader';
+import { DataLoader } from '../services/DataLoader';
 import { MainPageComponent } from './main-page.component';
 import { GlobalModule } from '../global-components/global-components.module';
 
