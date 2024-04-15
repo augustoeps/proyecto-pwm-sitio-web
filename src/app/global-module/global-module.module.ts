@@ -1,16 +1,16 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import {RouterLink, RouterOutlet} from '@angular/router';
-import { CabeceraComponent } from './header/cabecera.component';
+import { HeaderComponent } from './components/header/header.component';
 import { BrowserModule } from '@angular/platform-browser';
-import { FooterComponent } from './footer/footer.component';
+import { FooterComponent } from './components/footer/footer.component';
 
 
 @NgModule({
     imports: [CommonModule, RouterOutlet, BrowserModule, RouterLink],
-	exports: [CabeceraComponent, FooterComponent],
+	exports: [HeaderComponent, FooterComponent],
 	providers: [],
-	declarations: [CabeceraComponent, FooterComponent],
+	declarations: [HeaderComponent, FooterComponent],
 	bootstrap: [],
 })
 

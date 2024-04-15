@@ -4,14 +4,15 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { RouterOutlet } from '@angular/router';
-import { MainPageComponent } from './main-page/main-page.component';
-import { MainPageModule } from './main-page/main-page.module';
-import { ServiceModuleModule } from './service-module/service-module.module';
+import { HomeModule } from './home-module/home-module.module.module';
+import { ServiceModule } from './service-module/service-module.module';
+import { AuthModuleModule } from './auth-module/auth-module.module';
+import { DataLoader } from './services/DataLoader';
 
 @NgModule({
   declarations: [AppComponent],
-  imports: [BrowserModule, AppRoutingModule, RouterOutlet, MainPageModule, ServiceModuleModule],
-  providers: [],
+  imports: [BrowserModule, AppRoutingModule, RouterOutlet, HomeModule, ServiceModule, AuthModuleModule],
+  providers: [DataLoader],
   bootstrap: [AppComponent],
 })
 export class AppModule {}

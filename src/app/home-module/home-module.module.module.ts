@@ -4,8 +4,8 @@ import { RouterOutlet } from '@angular/router';
 import { BrowserModule } from '@angular/platform-browser';
 import { ScheduleInfoComponent } from './components/schedule-info/schedule-info.component';
 import { DataLoader } from '../services/DataLoader';
-import { MainPageComponent } from './main-page.component';
-import { GlobalModule } from '../global-components/global-components.module';
+import { MainPageComponent } from './components/main-page/main-page.component';
+import { GlobalModule } from '../global-module/global-module.module';
 
 @NgModule({
 	imports: [CommonModule, RouterOutlet, BrowserModule, GlobalModule],
@@ -15,4 +15,4 @@ import { GlobalModule } from '../global-components/global-components.module';
 	bootstrap: [MainPageComponent],
 })
 
-export class MainPageModule { }
+export class HomeModule { }

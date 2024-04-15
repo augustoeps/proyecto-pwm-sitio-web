@@ -1,6 +1,4 @@
-import { Component, OnInit } from '@angular/core';
-import { DataLoader } from '../services/DataLoader';
-import { CompletionObserver } from 'rxjs';
+import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-main-page',

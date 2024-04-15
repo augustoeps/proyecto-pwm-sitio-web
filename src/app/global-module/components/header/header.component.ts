@@ -1,11 +1,11 @@
 import { Component, ElementRef, ViewChild } from '@angular/core';
 
 @Component({
-	selector: 'app-cabecera',
-	templateUrl: './cabecera.component.html',
-	styleUrls: ['./cabecera.component.css'],
+	selector: 'app-header',
+	templateUrl: './header.component.html',
+	styleUrls: ['./header.component.css'],
 })
-export class CabeceraComponent {
+export class HeaderComponent {
 	@ViewChild('header_button') header_button!: ElementRef;
 	@ViewChild('header') header!: ElementRef;
 	hided: boolean;

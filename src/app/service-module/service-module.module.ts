@@ -1,27 +1,26 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { ServicioComponent } from './componentes/service/servicio.component';
-import { CardServiceComponent } from './componentes/services-loader/card-service/card-service.component';
-import {ServicesComponent} from "./componentes/services-loader/services.component";
-import { CabeceraComponent } from '../global-components/header/cabecera.component';
-import { MainPageModule } from '../main-page/main-page.module';
-import { GlobalModule } from '../global-components/global-components.module';
+import { ServiceComponent } from './components/service/service.component';
+import { CardServiceComponent } from './components/services-loader/card-service/card-service.component';
+import {ServicesComponent} from "./components/services-loader/services.component";
+import { HomeModule } from '../home-module/home-module.module.module';
+import { GlobalModule } from '../global-module/global-module.module';
 import { DataLoader } from '../services/DataLoader';
 
 
 
 @NgModule({
   declarations: [
-    ServicioComponent,
+    ServiceComponent,
     CardServiceComponent,
     ServicesComponent,
   ],
   providers: [DataLoader],
   imports: [
     CommonModule,
-    MainPageModule,
+    HomeModule,
     GlobalModule
   ],
   bootstrap:[ServicesComponent]
 })
-export class ServiceModuleModule { }
+export class ServiceModule { }
