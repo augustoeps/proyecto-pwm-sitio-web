@@ -6,6 +6,7 @@ import {ServicesComponent} from "./components/services-loader/services.component
 import { HomeModule } from '../home-module/home-module.module.module';
 import { GlobalModule } from '../global-module/global-module.module';
 import { DataLoader } from '../services/DataLoader';
+import { HttpClient } from '@angular/common/http';
 
 
 
@@ -15,7 +16,7 @@ import { DataLoader } from '../services/DataLoader';
     CardServiceComponent,
     ServicesComponent,
   ],
-  providers: [DataLoader],
+  providers: [DataLoader, HttpClient],
   imports: [
     CommonModule,
     HomeModule,

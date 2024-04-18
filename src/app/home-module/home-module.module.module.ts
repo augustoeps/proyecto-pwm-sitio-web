@@ -6,11 +6,12 @@ import { ScheduleInfoComponent } from './components/schedule-info/schedule-info.
 import { DataLoader } from '../services/DataLoader';
 import { MainPageComponent } from './components/main-page/main-page.component';
 import { GlobalModule } from '../global-module/global-module.module';
+import { HttpClient, HttpClientModule } from '@angular/common/http';
 
 @NgModule({
 	imports: [CommonModule, RouterOutlet, BrowserModule, GlobalModule],
 	exports: [MainPageComponent],
-	providers: [DataLoader],
+	providers: [DataLoader, HttpClient, HttpClientModule],
 	declarations: [MainPageComponent, ScheduleInfoComponent],
 	bootstrap: [MainPageComponent],
 })

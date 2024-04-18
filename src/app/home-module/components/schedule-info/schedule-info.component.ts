@@ -1,4 +1,4 @@
-import { Component } from "@angular/core";
+import { Component, OnInit } from "@angular/core";
 import { DataLoader } from "../../../services/DataLoader";
 import { CompletionObserver } from "rxjs";
 
@@ -8,27 +8,25 @@ import { CompletionObserver } from "rxjs";
     templateUrl: './schedule-info.component.html',
     styleUrls: ['./schedule-info.component.css'],
 })
-export class ScheduleInfoComponent implements CompletionObserver<any> {
-    schedule!: string;
-    address!: string;
-    phoneNumber!: string;
-    email!: string;
+export class ScheduleInfoComponent implements OnInit {
+    infotaller: any
+    schedule: any;
+    address: any;
+    phoneNumber: any;
+    email: any;
 
     constructor(private dataloader: DataLoader) {
-        this.dataloader.subscribe(this)
     }
 
-    complete() {
-        this.dataloader.getInfoTaller().then(res => {
-            console.log(res)
-            console.log(res.schedule)
-            this.schedule = res.schedule
-            this.address = res.address
-            this.phoneNumber = res.phone
-            this.email = res.email
-        })
+    ngOnInit(): void {
+        this.dataloader.getData().subscribe(
+            (res: any) => {
+                this.schedule = res.Infotaller.attributes.Horario
+                this.address = res.Infotaller.attributes.Direccion
+                this.phoneNumber = res.Infotaller.attributes.Telefono
+                this.email = res.Infotaller.attributes.Correo
+            } 
+        )
     }
-
-
 
 }

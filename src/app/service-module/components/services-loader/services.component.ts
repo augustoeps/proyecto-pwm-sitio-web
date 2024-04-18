@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { DataLoader } from '../../../services/DataLoader';
 import { CompletionObserver } from 'rxjs';
 
@@ -8,15 +8,14 @@ import { CompletionObserver } from 'rxjs';
   styleUrl: './services.component.css'
 })
 
-export class ServicesComponent implements CompletionObserver<any>{
-  infoservices!: any[];
+export class ServicesComponent implements OnInit{
+  infoservices!: any;
   constructor(private dataloader: DataLoader) {
-    dataloader.subscribe(this)
+  
   }
-  complete(){
-    this.dataloader.getServicios().then(servicios => {
-      this.infoservices = servicios
-    })
+
+  ngOnInit(): void {
+    this.dataloader.getData().subscribe((res: any )=> this.infoservices = res.Servicios)
   }
 }
 
