@@ -17,7 +17,7 @@
   border-radius: 25px;
   overflow: hidden;
   width: 18em;
-  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 5px 10px rgba(28, 34, 83, 0.7);
   transition: 0.5s transform;
   text-decoration: none;
 }

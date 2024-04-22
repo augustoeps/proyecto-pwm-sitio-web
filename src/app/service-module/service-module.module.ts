@@ -5,7 +5,7 @@ import { CardServiceComponent } from './components/services-loader/card-service/
 import {ServicesComponent} from "./components/services-loader/services.component";
 import { HomeModule } from '../home-module/home-module.module.module';
 import { GlobalModule } from '../global-module/global-module.module';
-import { DataLoader } from '../services/DataLoader';
+import { DataLoader } from '../services/DataLoader.service';
 import { HttpClient } from '@angular/common/http';
 
 

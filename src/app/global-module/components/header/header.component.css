@@ -74,10 +74,10 @@ nav .header-text-element {
 #logo-img {
 	position: absolute;
 	top: -1.5em;
-	left: -0.5em;
+	left: 0em;
 	padding-left: 2.5em;
-	height: 3em;
-	width: 5em;
+	height: 4em;
+
 }
 
 #header-button {

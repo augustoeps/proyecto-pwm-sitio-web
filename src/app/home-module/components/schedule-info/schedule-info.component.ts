@@ -1,5 +1,5 @@
 import { Component, OnInit } from "@angular/core";
-import { DataLoader } from "../../../services/DataLoader";
+import { DataLoader } from "../../../services/DataLoader.service";
 import { CompletionObserver } from "rxjs";
 
 

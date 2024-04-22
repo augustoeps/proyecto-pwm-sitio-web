@@ -7,7 +7,7 @@ import { RouterOutlet } from '@angular/router';
 import { HomeModule } from './home-module/home-module.module.module';
 import { ServiceModule } from './service-module/service-module.module';
 import { AuthModuleModule } from './auth-module/auth-module.module';
-import { DataLoader } from './services/DataLoader';
+import { DataLoader } from './services/DataLoader.service';
 import { HttpClient, HttpClientModule, HttpHandler } from '@angular/common/http';
 
 @NgModule({

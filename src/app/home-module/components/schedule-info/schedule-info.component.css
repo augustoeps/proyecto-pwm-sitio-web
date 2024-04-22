@@ -4,14 +4,13 @@
 }
 
 main {
-	margin-top: 45%;
 	font-family: inter, "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 
 .title {
 	text-align: center;
 	font-size: 2.5em;
-	margin-top: 3.5em;
+	margin-top: 2.5em;
 	margin-bottom: 1.2em;
 }
 
@@ -40,7 +39,7 @@ main {
 }
 
 .information {
-	margin-top: 3.4em;
+	margin-top: 1em;
 	padding: 0em 2em;
 	display: flex;
 	flex-wrap: wrap;
@@ -60,7 +59,7 @@ main {
 #social {
 	display: flex;
 	align-content: center;
-	background-color: black;
+	background-color: rgb(28, 34, 83);
 	width: 8em;
 	height: 2em;
 	gap: 1em;
