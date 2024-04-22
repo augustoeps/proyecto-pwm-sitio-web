@@ -4,13 +4,15 @@ import { MainPageComponent } from './home-module/components/main-page/main-page.
 import { ServicesComponent } from './service-module/components/services-loader/services.component';
 import {LogInComponent} from "./auth-module/components/log-in/log-in.component";
 import {SignUpComponent} from "./auth-module/components/sign-up/sign-up.component";
+import { ContactComponent } from './contact-module/contact-module.component';
 
 const routes: Routes = [
   {path:"", redirectTo:"Inicio", pathMatch:"full"},
   {path:"Inicio", component:MainPageComponent},
   {path:"Servicios", component:ServicesComponent},
   {path:"login",component:LogInComponent},
-  {path:"signup",component:SignUpComponent}
+  {path:"signup",component:SignUpComponent},
+  {path:"Contactar",component:ContactComponent}
 ];
 
 @NgModule({

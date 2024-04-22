@@ -9,10 +9,11 @@ import { ServiceModule } from './service-module/service-module.module';
 import { AuthModuleModule } from './auth-module/auth-module.module';
 import { DataLoader } from './services/DataLoader.service';
 import { HttpClient, HttpClientModule, HttpHandler } from '@angular/common/http';
+import { ContactModule } from './contact-module/contact-module.module';
 
 @NgModule({
   declarations: [AppComponent],
-  imports: [BrowserModule, AppRoutingModule, RouterOutlet, HomeModule, ServiceModule, AuthModuleModule, HttpClientModule],
+  imports: [BrowserModule, AppRoutingModule, RouterOutlet, HomeModule, ServiceModule, AuthModuleModule, ContactModule,HttpClientModule],
   providers: [DataLoader, HttpClient],
   bootstrap: [AppComponent],
 })
