@@ -10,10 +10,11 @@ import { AuthModuleModule } from './auth-module/auth-module.module';
 import { DataLoader } from './services/DataLoader.service';
 import { HttpClient, HttpClientModule, HttpHandler } from '@angular/common/http';
 import { ContactModule } from './contact-module/contact-module.module';
+import {ReviewModuleModule} from "./review-module/review-module.module";
 
 @NgModule({
   declarations: [AppComponent],
-  imports: [BrowserModule, AppRoutingModule, RouterOutlet, HomeModule, ServiceModule, AuthModuleModule, ContactModule,HttpClientModule],
+  imports: [BrowserModule, AppRoutingModule, RouterOutlet, HomeModule, ServiceModule, AuthModuleModule, ContactModule,HttpClientModule,ReviewModuleModule],
   providers: [DataLoader, HttpClient],
   bootstrap: [AppComponent],
 })

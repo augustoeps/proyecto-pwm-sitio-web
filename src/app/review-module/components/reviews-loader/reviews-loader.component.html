@@ -1,0 +1,10 @@
+<app-header></app-header>
+<h2 class="title">Reseñas</h2>
+<section class="reviews" *ngFor="let review of inforeviews">
+  <app-card-review
+    [Nombre]="review.attributes.Nombre"
+    [Comentario]="review.attributes.Comentario"
+    [Valoracion]="review.attributes.Valoracion"
+  ></app-card-review>
+</section>
+

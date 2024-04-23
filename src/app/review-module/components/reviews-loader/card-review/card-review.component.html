@@ -1,0 +1,17 @@
+<article class="card">
+  <header class="header-reseña">
+    <img
+      class="user-image"
+      src="../../../../../assets/Portrait_Placeholder.webp"
+    />
+    <h2>{{this.Nombre}}</h2>
+    <ul  class="stars" *ngFor="let item of [].constructor(this.Valoracion); let i = index">
+      <li><img src="../../../../../assets/Vector.webp" /></li>
+    </ul>
+  </header>
+  <div class="comment">
+    <p>
+      {{this.Comentario}}
+    </p>
+  </div>
+</article>

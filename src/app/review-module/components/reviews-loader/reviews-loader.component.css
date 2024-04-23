@@ -1,0 +1,17 @@
+.reviews{
+  display: flex;
+  flex-wrap: wrap;
+  row-gap: 5em;
+  flex-direction: row;
+  justify-content: center;
+  align-content: center;
+  margin-top: 1.2em;
+  margin-bottom: 2em;
+}
+
+.title{
+  text-align: center;
+  font-size: 30px;
+  font-family:  inter,'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin-top: 4em;
+}
