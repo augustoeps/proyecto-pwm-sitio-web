@@ -1,0 +1,13 @@
+<app-header></app-header>
+<h2 class="title">Reseñas</h2>
+<section class="reviews">
+  @for (review of inforeviews; track review){
+    <app-card-review
+      [Nombre]="review.attributes.Nombre"
+      [Comentario]="review.attributes.Comentario"
+      [Valoracion]="review.attributes.Valoracion"
+    ></app-card-review>
+  }
+</section>
+<app-footer></app-footer>
+

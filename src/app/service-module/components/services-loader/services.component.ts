@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { DataLoader } from '../../../services/DataLoader.service';
-import { CompletionObserver } from 'rxjs';
 
 @Component({
   selector: 'app-services-loader',
@@ -11,7 +10,7 @@ import { CompletionObserver } from 'rxjs';
 export class ServicesComponent implements OnInit{
   infoservices!: any;
   constructor(private dataloader: DataLoader) {
-  
+
   }
 
   ngOnInit(): void {
