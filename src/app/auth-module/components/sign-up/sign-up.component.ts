@@ -20,9 +20,9 @@ export class SignUpComponent {
   push() {
     this.clean()
     if(this.emailerrorr() && this.verifiedPassword() === "") {
-          const {email, password} = this.usuario
+          const {email, password,name} = this.usuario
           try {
-            this.authservice.register(email, password)
+            this.authservice.register(email, password,name)
             window.alert("usuario creado")
             this.router.navigate(["/login"])
 

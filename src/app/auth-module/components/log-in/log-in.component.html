@@ -11,6 +11,7 @@
       placeholder="Correo Electronico"
       required
       pattern="[a-z0-9._%+\-]+@[a-z0-9.\-]+\.[a-z]{2,}$"
+      [(ngModel)]="usuario.email"
     />
     <input
       type="password"
@@ -18,8 +19,10 @@
       id="password"
       placeholder="Contraseña"
       required
+      [(ngModel)]="usuario.password"
     />
     <input
+      (click)="push()"
       class="submit-button"
       type="submit"
       value="iniciar sesión"
