@@ -1,6 +1,5 @@
 import { Component, OnInit } from "@angular/core";
 import { DataLoader } from "../../../services/DataLoader.service";
-import { CompletionObserver } from "rxjs";
 
 
 @Component({
@@ -12,7 +11,7 @@ export class ScheduleInfoComponent implements OnInit {
     infotaller: any
     schedule: any;
     address: any;
-    phoneNumber: any;
+    phone: any;
     email: any;
 
     constructor(private dataloader: DataLoader) {
@@ -23,7 +22,7 @@ export class ScheduleInfoComponent implements OnInit {
             (res: any) => {
                 this.schedule = res.Infotaller.attributes.Horario
                 this.address = res.Infotaller.attributes.Direccion
-                this.phoneNumber = res.Infotaller.attributes.Telefono
+                this.phone = res.Infotaller.attributes.Telefono
                 this.email = res.Infotaller.attributes.Correo
             } 
         )

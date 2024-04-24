@@ -20,11 +20,13 @@ main {
 	border-radius: 25px;
 	display: inline-flexbox;
 	padding: 1.5em;
+	display: flex;
+	flex-direction: column;
+	gap: 1.5em;
 
 	header {
 		h2 {
 			font-size: 1.3em;
-			padding-bottom: 5%;
 		}
 	}
 
@@ -33,8 +35,10 @@ main {
 	}
 
 	em {
-		padding-left: 10%;
-		height: 20px;
+		font-family: inter, "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+		font-style: normal;
+		font-weight: 400;
+		margin-left: 1em;
 	}
 }
 
@@ -56,8 +60,13 @@ main {
 	justify-items: center;
 }
 
+#contact{
+	width: 16em;
+}
+
 #social {
 	display: flex;
+	flex-direction: row;
 	align-content: center;
 	background-color: rgb(28, 34, 83);
 	width: 8em;
