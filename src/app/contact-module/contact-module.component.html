@@ -1,3 +1,10 @@
+<link
+	rel="stylesheet"
+	href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+	integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+	crossorigin="anonymous"
+	referrerpolicy="no-referrer"
+/>
 <app-header></app-header>
 
 <div class="card">
@@ -5,33 +12,28 @@
 		<h2 class="title">Contactar</h2>
 		<p class="subtitle">Datos del taller</p>
 		<div class="info">
-			<i class="fas fa-phone"><em>928 03 99 29</em></i>
-
-			<i class="fas fa-envelope">
-				<em>tallermecanico&commat;gmail.com</em></i
+			<i class="fas fa-phone"
+				><em>{{ phone }}</em></i
 			>
 
-			<i class="fas fa-map-marker-alt"><em>Plaza de los Derechos Humanos, 2, C.P. 35071</em></i>
+			<i class="fas fa-envelope">
+				<em>{{ email }}</em></i
+			>
+
+			<i class="fas fa-map-marker-alt"
+				><em>{{ address }}</em></i
+			>
 		</div>
 
 		<div class="social-icons">
 			<a class="social" href="#">
-				<img
-					class="icon"
-					src="/assets/icons/icons-instagram.svg"
-				/>
+				<img class="icon" src="/assets/icons/icons-instagram.svg" />
 			</a>
 			<a class="social" href="#">
-				<img
-					class="icon"
-					src="/assets/icons/icons-facebook.svg"
-				/>
+				<img class="icon" src="/assets/icons/icons-facebook.svg" />
 			</a>
 			<a class="social" href="#">
-				<img
-					class="icon"
-					src="/assets/icons/icons-whatsapp.svg"
-				/>
+				<img class="icon" src="/assets/icons/icons-whatsapp.svg" />
 			</a>
 		</div>
 	</section>
@@ -51,11 +53,18 @@
 			<input type="tel" id="phone" />
 		</div>
 		<div class="radio-group">
-			<label><input type="radio" name="subject" /> Cambio de aceite</label>
+			<label
+				><input type="radio" name="subject" /> Cambio de aceite</label
+			>
 
-			<label><input type="radio" name="subject" /> Cambio de frenos</label>
+			<label
+				><input type="radio" name="subject" /> Cambio de frenos</label
+			>
 
-			<label><input type="radio" name="subject" /> Cambio de neumático</label>
+			<label
+				><input type="radio" name="subject" /> Cambio de
+				neumático</label
+			>
 
 			<label><input type="radio" name="subject" /> Otros</label>
 		</div>

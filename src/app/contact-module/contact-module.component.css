@@ -10,12 +10,12 @@
 	box-shadow: 0 10px 145px rgba(0, 0, 0, 0.25);
 	background: rgb(33, 43, 137);
 	color: white;
-	text-align: center;
+	text-align: left;
 	border-radius: 1em 0 0 1em;
-	padding: 0 1.5em;
+	padding: 0 2em;
 	display: flex;
 	flex-direction: column;
-	font-size: 0.9em;
+	font-size: 1em;
 
 	em {
 		font-family: inter, "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
@@ -134,7 +134,7 @@
 }
 
 .social-icons {
-	margin-top: 11.5em;
+	margin-top: 9.6em;
 	justify-content: center;
 	display: flex;
 	flex-direction: row;
@@ -196,6 +196,7 @@
 	.contact-info {
 		order: 2;
 		height: 100%;
+		text-align: center;
 	}
 
 	.contact-form {
