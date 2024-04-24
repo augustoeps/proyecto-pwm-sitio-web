@@ -38,8 +38,26 @@
       </ul>
     </nav>
   </div>
-  <div class="user-button">
+  <div class="user-button" *ngIf="!test(); else mensaje">
     <a
+      (click)="logout()"
+      routerLink="/"
+      id="logout-buttonn"
+    >
+      Bienvenido {{nombre}}
+    </a>
+    <a
+      (click)="logout()"
+      routerLink="/"
+      id="logout-button"
+    >
+      Cerrar sesión
+    </a>
+  </div>
+  <ng-template #mensaje>
+  <div *ngIf="mostrarLogin" class="user-button">
+    <a
+
       routerLink="/login"
       id="login-button"
     >
@@ -51,6 +69,8 @@
     >
       Registrarse
     </a>
+
   </div>
+  </ng-template>
 </header>
 <button #header_button (click)="changeHeaderVisibility()"  id="header-button">≡</button>

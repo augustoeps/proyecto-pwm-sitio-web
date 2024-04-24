@@ -24,7 +24,7 @@ export class SignUpComponent {
           try {
             this.authservice.register(email, password,name)
             window.alert("usuario creado")
-            this.router.navigate(["/login"])
+            this.router.navigate(["/"])
 
           } catch (error) {
             console.log("error")

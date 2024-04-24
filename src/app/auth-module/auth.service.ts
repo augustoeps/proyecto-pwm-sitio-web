@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import {AngularFireAuth} from "@angular/fire/compat/auth";
 import firebase from "firebase/compat";
 import {AngularFirestore} from "@angular/fire/compat/firestore";
+import { filter, map, Observable } from "rxjs";
 
 @Injectable({
   providedIn: 'root'
@@ -14,7 +15,9 @@ export class AuthService {
   async register(email: string, password: string, name: string) {
     try {
       const result = await this.afauth.createUserWithEmailAndPassword(email, password);
+
       if (result && result.user) {
+
         await this.firestore.collection('users').doc(result.user.uid).set({
           email: email,
           name: name,
@@ -35,7 +38,21 @@ export class AuthService {
 
         return await this.afauth.signInWithEmailAndPassword(email,password)
 
-    }
+  }
+
+  obtenerUser(){
+
+    return this.afauth.authState
+
+  }
+  obtenerDatosUsuario(uid: string): Observable<any> {
+    return this.firestore.collection('users').doc(uid).valueChanges();
+  }
+
+  logout() {
+    return this.afauth.signOut();
+  }
+
 
 
 }
