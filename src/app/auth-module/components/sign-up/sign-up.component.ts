@@ -23,7 +23,7 @@ export class SignUpComponent {
           const {email, password,name} = this.usuario
           try {
             this.authservice.register(email, password,name)
-            window.alert("usuario creado")
+            window.alert("usuario creado.")
             this.router.navigate(["/"])
 
           } catch (error) {

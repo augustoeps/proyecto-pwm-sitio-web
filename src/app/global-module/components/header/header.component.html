@@ -11,42 +11,54 @@
           <a
             href="/Inicio"
             class="header-text-element"
-            >Inicio</a
+          >Inicio</a
           >
         </li>
         <li>
           <a
             href="/Servicios"
             class="header-text-element"
-            >Servicios</a
+          >Servicios</a
           >
         </li>
         <li>
           <a
             href="/Contactar"
             class="header-text-element"
-            >Contacto</a
+          >Contacto</a
           >
         </li>
         <li>
           <a
             href="/Reviews"
             class="header-text-element"
-            >Reseñas</a
+          >Reseñas</a
           >
         </li>
       </ul>
     </nav>
   </div>
   <div class="user-button" *ngIf="!test(); else mensaje">
+    <div class="profile-container">
+      <label for="profile-image-input">
+        <img src={{image}} alt="Profile Picture" class="profile-image">
+      </label>
+      <input type="file"  (change)="onFileSelected($event)" id="profile-image-input" accept="image/*" style="display: none" >
+
+
+    </div>
+
     <a
-      (click)="logout()"
-      routerLink="/"
+
       id="logout-buttonn"
     >
       Bienvenido {{nombre}}
     </a>
+
+
+
     <a
+
       (click)="logout()"
       routerLink="/"
       id="logout-button"
@@ -55,22 +67,24 @@
     </a>
   </div>
   <ng-template #mensaje>
-  <div *ngIf="mostrarLogin" class="user-button">
-    <a
+    <div *ngIf="mostrarLogin" class="user-button">
 
-      routerLink="/login"
-      id="login-button"
-    >
-      Iniciar sesión
-    </a>
-    <a
-      routerLink="/signup"
-      id="register-button"
-    >
-      Registrarse
-    </a>
 
-  </div>
+      <a
+
+        routerLink="/login"
+        id="login-button"
+      >
+        Iniciar sesión
+      </a>
+      <a
+        routerLink="/signup"
+        id="register-button"
+      >
+        Registrarse
+      </a>
+
+    </div>
   </ng-template>
 </header>
 <button #header_button (click)="changeHeaderVisibility()"  id="header-button">≡</button>
