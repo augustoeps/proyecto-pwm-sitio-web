@@ -1,13 +1,19 @@
+.container{
+  display: flex;
+  justify-content: center;
+}
+
 .reviews{
   display: flex;
   flex-wrap: wrap;
-  column-gap: 14em;
+  column-gap: 20%;
   row-gap: 5em;
   flex-direction: row;
   justify-content: center;
   align-content: center;
   margin-top: 3em;
   margin-bottom: 2em;
+  width: 100em;
 }
 
 .title{

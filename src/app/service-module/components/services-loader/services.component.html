@@ -2,13 +2,12 @@
 <div class="container">
 	<h1 class="title">Servicios</h1>
 	<section class="card-container" id="container">
-		<div *ngFor="let service of infoservices">
 			<app-card-service
+			*ngFor="let service of infoservices"
 				[Titulo]="service.attributes.Title"
 				[Precio]="service.attributes.Precio"
 				[Imagen]="'/assets/services/'+service.attributes.imagen"
 			></app-card-service>
-		</div>
 	</section>
 </div>
 <app-footer></app-footer>

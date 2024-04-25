@@ -20,8 +20,9 @@
   background: #ffffff;
   box-shadow: 0 100px 145px rgba(0, 0, 0, 0.25);
   border-radius: 15px;
-  display: inline-block;
-  width: 22em;
+  display: flex;
+  flex-direction: column; 
+  width: 23em ;
   justify-content: center;
   align-items: center;
   font-family: inter, "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
@@ -32,6 +33,7 @@
   header {
     display: flex;
     align-items: center;
+    gap: 3em;
     justify-content: space-between;
     padding-top: 3%;
 
@@ -53,7 +55,7 @@
 
 .stars {
   list-style: none;
-  display: inline-flex;
+  display: flex;
   width: 80px;
   margin-right: 2em;
 }
