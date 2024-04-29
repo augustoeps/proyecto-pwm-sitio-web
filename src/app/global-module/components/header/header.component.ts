@@ -21,6 +21,7 @@ export class HeaderComponent implements OnInit{
   @Input() mostrarLogin: boolean = true;
   selectedFile: File | null = null;
   uid:string | null = ""
+  imagePreviewUrl = ""
   constructor(private authService: AuthService,private storage: AngularFireStorage) {
     this.hided = true;
     this.animationClass = 'none';
@@ -35,7 +36,7 @@ export class HeaderComponent implements OnInit{
           console.log(data.firtstime)
           this.nombre = data.name
           if(data.firtstime){
-            this.image = "/assets/services/perfil.webp"
+            this.imagePreviewUrl = "/assets/services/perfil.webp"
 
 
           }else {
@@ -73,6 +74,10 @@ export class HeaderComponent implements OnInit{
 
   onFileSelected(event: any): void {
     this.selectedFile = event.target.files?.[0] || null;
+    if (this.selectedFile) {
+      this.imagePreviewUrl = URL.createObjectURL(this.selectedFile);
+    }
+
     this.uploadProfilePhoto()
   }
 
@@ -81,16 +86,16 @@ export class HeaderComponent implements OnInit{
     if (this.selectedFile) {
 
       const user = await this.authService.obtenerUser();
-      console.log("entre1")
+
       if (user) {
         try {
 
-          console.log("entre2")
+
           const uid = this.authService.getCurrentUserUid();
           this.uid = await uid
           await this.authService.actualizarValorBooleano(this.uid || "ff");
           const photoURL = await this.authService.updateProfilePhoto(this.uid || "ff", this.selectedFile);
-          console.log("entre3")
+
           console.log('URL de la imagen de perfil actualizada:', photoURL);
 
 

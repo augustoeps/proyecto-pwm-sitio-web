@@ -155,8 +155,8 @@ nav .header-text-element {
 }
 
 .profile-container{
-  width: 50px; /* Ancho de contenedor de imagen */
-  height: 50px; /* Altura de contenedor de imagen */
+  max-width: 50px; /* Ancho de contenedor de imagen */
+  max-height: 50px; /* Altura de contenedor de imagen */
   border-radius: 50%; /* Borde redondeado para una foto de perfil circular */
   overflow: hidden;
   object-fit: cover;

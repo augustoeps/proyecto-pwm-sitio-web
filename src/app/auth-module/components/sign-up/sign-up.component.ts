@@ -17,27 +17,42 @@ export class SignUpComponent {
   constructor(private authservice: AuthService,private router:Router) {
   }
 
-  push() {
+  async push() {
     this.clean()
-    if(this.emailerrorr() && this.verifiedPassword() === "") {
+
+    if(this.emailerrorr() && this.verifiedPassword() === "" && this.nameempty()) {
           const {email, password,name} = this.usuario
           try {
-            this.authservice.register(email, password,name)
-            window.alert("usuario creado.")
-            this.router.navigate(["/"])
+            const x = await this.authservice.register(email, password,name)
+            if(!(x ==null)){
+              window.alert("usuario creado.")
+              this.router.navigate(["/"])
+            }else{
+              this.emailrepet()
+            }
+
 
           } catch (error) {
-            console.log("error")
+            // @ts-ignore
+            const x = error.code
+            if (x == 'auth/email-already-in-use') {
+              console.log("email repedito")
+            }
           }
     }else {
       const x = this.verifiedPassword();
-      if(!this.emailerrorr() && this.verifiedPassword()!=""){
+      if(!this.emailerrorr() && this.verifiedPassword()!="" && !this.nameempty()){
         this.emailBadly()
         this.showpasswordError(x)
+        this.shownameError()
         return
 
-      }else if(this.verifiedPassword() != ""){
+      }else if(this.verifiedPassword() != "") {
         this.showpasswordError(x)
+        return;
+
+      }else if(!this.nameempty()){
+        this.shownameError()
         return;
 
       }else{
@@ -48,8 +63,38 @@ export class SignUpComponent {
       }
     }
 
-
   }
+
+  nameempty(){
+    const x = document.getElementById("name") as HTMLInputElement
+    const value = x.value
+    if(value.length == 0){
+      return false
+    }
+    return true
+  }
+
+  shownameError(){
+    const emailError = document.getElementById("name-error")!;
+
+
+    emailError.textContent = "";
+    emailError.style.display = 'none';
+
+    emailError.textContent = "El nombre no puede estar vacio.";
+    emailError.style.display = 'block';
+  }
+  emailrepet(){
+    const emailError = document.getElementById("email-used")!;
+
+
+    emailError.textContent = "";
+    emailError.style.display = 'none';
+
+    emailError.textContent = "El correo ya se encuentra en nuestra base de datos";
+    emailError.style.display = 'block';
+  }
+
 
   emailerrorr() {
 
@@ -82,11 +127,18 @@ export class SignUpComponent {
   clean(){
     const emailError = document.getElementById("email-error")!;
     const passwordError = document.getElementById("passwordreg-error")!;
+    const nameError = document.getElementById("name-error")!;
+    const emailerror = document.getElementById("email-used")!;
 
     emailError.textContent = "";
     emailError.style.display = 'none';
     passwordError.textContent = "";
     passwordError.style.display = 'none';
+    nameError.textContent="";
+    nameError.style.display = "none"
+    emailerror.textContent=""
+    emailerror.style.display="none"
+
 
 
   }
