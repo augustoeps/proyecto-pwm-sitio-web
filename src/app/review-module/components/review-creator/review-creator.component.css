@@ -36,6 +36,7 @@
 .stars {
 	display: flex;
 	flex-direction: row;
+	min-height: 1.5em;
 }
 
 .unselectedStar {
