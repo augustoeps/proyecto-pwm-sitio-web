@@ -6,13 +6,17 @@ import {GlobalModule} from "../global-module/global-module.module";
 import {DataLoader} from "../services/DataLoader.service";
 import {HttpClient} from "@angular/common/http";
 import {HomeModule} from "../home-module/home-module.module.module";
+import { ReviewCreatorComponent } from './components/review-creator/review-creator.component';
+import { ReviewsComponent } from './components/reviews/reviews.component';
 
 
 
 @NgModule({
   declarations: [
     ReviewsLoaderComponent,
-    CardReviewComponent
+    CardReviewComponent,
+    ReviewCreatorComponent,
+    ReviewsComponent
   ],
   providers: [DataLoader, HttpClient],
   imports: [
@@ -20,6 +24,6 @@ import {HomeModule} from "../home-module/home-module.module.module";
     HomeModule,
     GlobalModule
   ],
-  bootstrap: [ReviewsLoaderComponent]
+  bootstrap: [ReviewsComponent]
 })
 export class ReviewModuleModule { }

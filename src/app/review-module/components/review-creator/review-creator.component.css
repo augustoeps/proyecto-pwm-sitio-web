@@ -1,0 +1,16 @@
+.staropacity{
+  cursor: crosshair;
+  opacity: 0.7;
+
+}
+#star1:hover {
+  opacity: 1;
+}
+
+#star2:hover {}
+
+#star3:hover {}
+
+#star4:hover {}
+
+#star5:hover {}
