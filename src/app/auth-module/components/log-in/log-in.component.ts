@@ -18,19 +18,57 @@ export class LogInComponent {
   constructor(private authservice: AuthService,private router:Router) {
   }
 
-  push(){
+  async push() {
+    this.clean()
     const { email, password } = this.usuario;
 
-    this.authservice.login(email, password)
-      .then(() => {
-        // Usuario ha iniciado sesión correctamente
-        this.router.navigate(['/']);
-      })
-      .catch(error => {
+    try {
+      await this.authservice.login(email, password);
+      // Usuario ha iniciado sesión correctamente
+      this.router.navigate(['/']);
+    } catch (error) {
+      // @ts-ignore
+      if(error.code === 'auth/invalid-credential'){
+        console.log("pedejo")
+        this.shownameError()
+      }
+      // @ts-ignore
+      if(error.code === "auth/invalid-email"){
+        this.shownameError1()
 
-        console.error('Error al iniciar sesión:', error);
 
-      });
+      }
+
+    }
+  }
+
+  clean() {
+    const emailError = document.getElementById("email-notFound")!;
+
+
+    emailError.textContent = "";
+    emailError.style.display = 'none';
+  }
+
+  shownameError(){
+    const emailError = document.getElementById("email-notFound")!;
+
+
+    emailError.textContent = "";
+    emailError.style.display = 'none';
+
+    emailError.textContent = "Correo o contraseña incorrecto.";
+    emailError.style.display = 'block';
+  }
+  shownameError1(){
+    const emailError = document.getElementById("email-notFound")!;
+
+
+    emailError.textContent = "";
+    emailError.style.display = 'none';
+
+    emailError.textContent = "Formato del correo erroneo.";
+    emailError.style.display = 'block';
   }
 
 }

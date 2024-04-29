@@ -36,9 +36,13 @@ export class AuthService {
     }
   }
 
-  async login(email:string,password:string){
-
-    return await this.afauth.signInWithEmailAndPassword(email,password)
+  async login(email: string, password: string): Promise<void> {
+    try {
+      await this.afauth.signInWithEmailAndPassword(email, password);
+      console.log('Inicio de sesión exitoso');
+    } catch (error) {
+      throw error; // Lanzar explícitamente el error para que sea capturado por la función que llama
+    }
 
   }
 
