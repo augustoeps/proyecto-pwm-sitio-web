@@ -145,7 +145,7 @@ export class SignUpComponent {
   verifiedPassword():string{
     const {password} = this.usuario
     if(password.length < 6){
-      return "Error de contraseña"
+      return "La Contraseña debe tener al menos 6 caracteres"
     }
     return ""
   }
