@@ -25,7 +25,7 @@ export class SignUpComponent {
           try {
             const x = await this.authservice.register(email, password,name)
             if(!(x ==null)){
-              window.alert("usuario creado.")
+
               this.router.navigate(["/"])
             }else{
               this.emailrepet()
