@@ -1,92 +1,58 @@
 <header class="header">
-  <img
-    id="logo-img"
-    alt="logo"
-    src="/assets/logo.webp"
-  />
-  <div #header class="container" [ngClass]="this.animationClass">
-    <nav>
-      <ul>
-        <li>
-          <a
-            href="/Inicio"
-            class="header-text-element"
-          >Inicio</a
-          >
-        </li>
-        <li>
-          <a
-            href="/Servicios"
-            class="header-text-element"
-          >Servicios</a
-          >
-        </li>
-        <li>
-          <a
-            href="/Contactar"
-            class="header-text-element"
-          >Contacto</a
-          >
-        </li>
-        <li>
-          <a
-            href="/Reviews"
-            class="header-text-element"
-          >Reseñas</a
-          >
-        </li>
-      </ul>
-    </nav>
-  </div>
-  <div class="user-button" *ngIf="!test(); else mensaje">
-    <div class="profile-container">
-      <label for="profile-image-input">
+	<img id="logo-img" alt="logo" src="/assets/logo.webp" />
+	<div #header class="container" [ngClass]="this.animationClass">
+		<nav>
+			<ul>
+				<li>
+					<a href="/Inicio" class="header-text-element">Inicio</a>
+				</li>
+				<li>
+					<a href="/Servicios" class="header-text-element"
+						>Servicios</a
+					>
+				</li>
+				<li>
+					<a href="/Contactar" class="header-text-element"
+						>Contacto</a
+					>
+				</li>
+				<li>
+					<a href="/Reviews" class="header-text-element">Reseñas</a>
+				</li>
+			</ul>
+		</nav>
+	</div>
+	<div class="user-button" *ngIf="!test(); else mensaje">
+		<div class="profile-container">
+			<label for="profile-image-input">
+				<img
+					src="{{ imagePreviewUrl || image }}"
+					alt="Profile Picture"
+					class="profile-image"
+				/>
+			</label>
+			<input
+				type="file"
+				(change)="onFileSelected($event)"
+				id="profile-image-input"
+				accept="image/*"
+				style="display: none"
+			/>
+		</div>
 
-        <img src="{{imagePreviewUrl ||image}}" alt="Profile Picture" class="profile-image">
+		<a id="logout-buttonn"> Bienvenido </a>
 
-      </label>
-      <input type="file"  (change)="onFileSelected($event)" id="profile-image-input" accept="image/*" style="display: none" >
-
-
-    </div>
-
-    <a
-
-      id="logout-buttonn"
-    >
-      Bienvenido {{nombre}}
-    </a>
-
-
-
-    <a
-
-      (click)="logout()"
-      routerLink="/"
-      id="logout-button"
-    >
-      Cerrar sesión
-    </a>
-  </div>
-  <ng-template #mensaje>
-    <div *ngIf="mostrarLogin" class="user-button">
-
-
-      <a
-
-        routerLink="/login"
-        id="login-button"
-      >
-        Iniciar sesión
-      </a>
-      <a
-        routerLink="/signup"
-        id="register-button"
-      >
-        Registrarse
-      </a>
-
-    </div>
-  </ng-template>
+		<a (click)="logout()" routerLink="/" id="logout-button">
+			Cerrar sesión
+		</a>
+	</div>
+	<ng-template #mensaje>
+		<div *ngIf="mostrarLogin" class="user-button">
+			<a routerLink="/login" id="login-button"> Iniciar sesión </a>
+			<a routerLink="/signup" id="register-button"> Registrarse </a>
+		</div>
+	</ng-template>
 </header>
-<button #header_button (click)="changeHeaderVisibility()"  id="header-button">≡</button>
+<button #header_button (click)="changeHeaderVisibility()" id="header-button">
+	≡
+</button>

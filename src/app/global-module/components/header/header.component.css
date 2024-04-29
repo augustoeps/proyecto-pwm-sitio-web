@@ -221,6 +221,10 @@ nav .header-text-element {
     display: block;
   }
 
+  #logout-buttonn{
+    display: none;
+  }
+
   #logo-img{
     display: none;
   }
