@@ -1,0 +1,46 @@
+<app-header [mostrarLogin]="false"></app-header>
+<body>
+<form>
+  <h2>Registrate</h2>
+
+  <div class="input-group">
+    <div id="email-used" style="display: none; color: red; margin-top: 1%;"></div>
+    <input
+      type="text"
+      name="name"
+      id="name"
+      placeholder="Nombre y apellidos"
+      required
+      [(ngModel)]="usuario.name"
+    />
+    <div id="name-error" style="display: none; color: red; margin-top: 1%;"></div>
+    <input
+      type="email"
+      name="email"
+      id="email"
+      placeholder="Correo Electronico"
+      required
+      pattern="[a-z0-9._%+\-]+@[a-z0-9.\-]+\.[a-z]{2,}$"
+      [(ngModel)]="usuario.email"
+    />
+    <div id="email-error" style="display: none; color: red; margin-top: 1%;"></div>
+    <input
+      type="password"
+      name="password"
+      id="password"
+      placeholder="Contraseña"
+      required
+      [(ngModel)]="usuario.password"
+    />
+    <div id="passwordreg-error" style="display: none; color: red; margin-top: 1%;"></div>
+    <input
+      (click)="push()"
+      class="submit-button"
+      type="submit"
+      value="Registrarse"
+    />
+  </div>
+</form>
+<em>¿Ya tienes una cuenta?</em>
+<a class="link" href="/login">iniciar sesión</a>
+</body>
