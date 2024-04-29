@@ -7,18 +7,26 @@ import {
   USE_DEVICE_LANGUAGE,
   USE_EMULATOR,
   ɵauthFactory
-} from "./chunk-4TUPRPUZ.js";
-import "./chunk-IGCBNCC6.js";
+} from "./chunk-M23LMYPF.js";
+import "./chunk-6ZUNSECE.js";
+import "./chunk-ZSF5IGPM.js";
+import "./chunk-7OT4NEO4.js";
+import "./chunk-VCK7EUZD.js";
 import {
   FIREBASE_APP_NAME,
   FIREBASE_OPTIONS,
+  ɵcacheInstance,
+  ɵfirebaseAppFactory
+} from "./chunk-U73JDPJF.js";
+import {
   VERSION,
   keepUnstableUntilFirst,
   ɵAngularFireSchedulers,
-  ɵAppCheckInstances,
-  ɵcacheInstance,
-  ɵfirebaseAppFactory
-} from "./chunk-FE3RA2F5.js";
+  ɵAppCheckInstances
+} from "./chunk-PGQODRFC.js";
+import {
+  firebase
+} from "./chunk-NDC4VCEK.js";
 import {
   Component,
   FirebaseError,
@@ -28,13 +36,12 @@ import {
   _registerComponent,
   createMockUserToken,
   deepEqual,
-  firebase,
   getModularInstance,
   getUA,
   isIndexedDBAvailable,
   isSafari,
   registerVersion
-} from "./chunk-PPNBXIED.js";
+} from "./chunk-MBKDNXOB.js";
 import {
   isPlatformServer
 } from "./chunk-6IYZ7O2X.js";

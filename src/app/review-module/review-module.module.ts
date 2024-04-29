@@ -8,6 +8,7 @@ import {HttpClient} from "@angular/common/http";
 import {HomeModule} from "../home-module/home-module.module.module";
 import { ReviewCreatorComponent } from './components/review-creator/review-creator.component';
 import { ReviewsComponent } from './components/reviews/reviews.component';
+import { FormsModule } from '@angular/forms';
 
 
 
@@ -22,7 +23,8 @@ import { ReviewsComponent } from './components/reviews/reviews.component';
   imports: [
     CommonModule,
     HomeModule,
-    GlobalModule
+    GlobalModule,
+    FormsModule
   ],
   bootstrap: [ReviewsComponent]
 })
