@@ -25,8 +25,7 @@ import { FormsModule } from '@angular/forms';
     CommonModule,
     HomeModule,
     GlobalModule,
-    provideStorage(() => getStorage())
-    GlobalModule,
+    provideStorage(() => getStorage()),
     FormsModule
   ],
   bootstrap: [ReviewsComponent]

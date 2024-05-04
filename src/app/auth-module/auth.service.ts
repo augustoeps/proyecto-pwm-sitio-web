@@ -39,7 +39,6 @@ export class AuthService {
   async login(email: string, password: string): Promise<void> {
     try {
       await this.afauth.signInWithEmailAndPassword(email, password);
-      console.log('Inicio de sesión exitoso');
     } catch (error) {
       throw error; // Lanzar explícitamente el error para que sea capturado por la función que llama
     }
@@ -47,9 +46,7 @@ export class AuthService {
   }
 
   obtenerUser(){
-
     return this.afauth.authState
-
   }
   async getCurrentUserUid(): Promise<string | null> {
     const user = await this.afauth.currentUser;
@@ -62,7 +59,6 @@ export class AuthService {
   async actualizarValorBooleano(uid: string): Promise<void> {
     try {
       await this.firestore.collection('users').doc(uid).update({ firtstime: false });
-      console.log('Valor booleano actualizado correctamente en Firestore.');
     } catch (error) {
       console.error('Error al actualizar el valor booleano en Firestore:', error);
       throw error; // Puedes manejar el error según tus necesidades

@@ -11,6 +11,7 @@ export class ReviewsLoaderComponent implements OnInit{
   constructor(private dataloader: DataLoader) {}
 
   ngOnInit(): void {
-    this.dataloader.getData().subscribe( (res:any) => this.inforeviews = res.Reseñas)
+    this.dataloader.getData().subscribe( (res:any) => this.inforeviews = Object.values(res.Reseñas))
+
   }
 }

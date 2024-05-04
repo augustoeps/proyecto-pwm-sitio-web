@@ -3,9 +3,9 @@
     <section class="reviews">
         <app-card-review
             *ngFor="let review of inforeviews"
-            [Nombre]="review.attributes.Nombre"
-            [Comentario]="review.attributes.Comentario"
-            [Valoracion]="review.attributes.Valoracion"
+            [Nombre]="review.name"
+            [Comentario]="review.descripcion"
+            [Valoracion]="review.valoracion"
         ></app-card-review>
     </section>
 </div>
