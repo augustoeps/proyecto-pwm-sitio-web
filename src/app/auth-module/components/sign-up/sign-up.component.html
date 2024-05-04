@@ -2,7 +2,9 @@
 <body>
 <form>
   <h2>Registrate</h2>
+
   <div class="input-group">
+    <div id="email-used" style="display: none; color: red; margin-top: 1%;"></div>
     <input
       type="text"
       name="name"
@@ -11,6 +13,7 @@
       required
       [(ngModel)]="usuario.name"
     />
+    <div id="name-error" style="display: none; color: red; margin-top: 1%;"></div>
     <input
       type="email"
       name="email"

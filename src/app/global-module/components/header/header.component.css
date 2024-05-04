@@ -122,6 +122,7 @@ nav .header-text-element {
   box-shadow: 0px 0.3em 1.8em rgba(0, 0, 0, 0.25);
   font-weight: 600;
 }
+
 .email{
   background-color: #f0f0f0; /* Color de fondo */
   color: #333; /* Colo7 del texto */
@@ -155,8 +156,8 @@ nav .header-text-element {
 }
 
 .profile-container{
-  width: 50px; /* Ancho de contenedor de imagen */
-  height: 50px; /* Altura de contenedor de imagen */
+  max-width: 50px; /* Ancho de contenedor de imagen */
+  max-height: 50px; /* Altura de contenedor de imagen */
   border-radius: 50%; /* Borde redondeado para una foto de perfil circular */
   overflow: hidden;
   object-fit: cover;
@@ -218,6 +219,10 @@ nav .header-text-element {
 @media screen and (max-width: 800px) {
   #header-button {
     display: block;
+  }
+
+  #logout-buttonn{
+    display: none;
   }
 
   #logo-img{

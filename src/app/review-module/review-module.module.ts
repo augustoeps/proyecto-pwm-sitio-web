@@ -9,6 +9,7 @@ import {HomeModule} from "../home-module/home-module.module.module";
 import { ReviewCreatorComponent } from './components/review-creator/review-creator.component';
 import { ReviewsComponent } from './components/reviews/reviews.component';
 import { getStorage, provideStorage } from "@angular/fire/storage";
+import { FormsModule } from '@angular/forms';
 
 
 
@@ -25,6 +26,8 @@ import { getStorage, provideStorage } from "@angular/fire/storage";
     HomeModule,
     GlobalModule,
     provideStorage(() => getStorage())
+    GlobalModule,
+    FormsModule
   ],
   bootstrap: [ReviewsComponent]
 })

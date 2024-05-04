@@ -1,5 +1,5 @@
 import { Component, ElementRef, Input, OnInit, ViewChild } from "@angular/core";
-import {AuthService} from "../../../auth-module/auth.service"
+import { AuthService } from "../../../auth-module/auth.service"
 import { AngularFireStorage } from "@angular/fire/compat/storage";
 import { of, switchMap } from "rxjs";
 import { user } from "@angular/fire/auth";
@@ -9,37 +9,32 @@ import { user } from "@angular/fire/auth";
   templateUrl: './header.component.html',
   styleUrls: ['./header.component.css'],
 })
-export class HeaderComponent implements OnInit{
+export class HeaderComponent implements OnInit {
 
   @ViewChild('header_button') header_button!: ElementRef;
   @ViewChild('header') header!: ElementRef;
   hided: boolean;
   animationClass: string;
-  email:string | null = ""
-  nombre:string | null = ""
-  image: string = ""
+  email: string | null = ""
+  nombre: string | null = ""
+  image: string = "/assets/services/perfil.webp"
   @Input() mostrarLogin: boolean = true;
   selectedFile: File | null = null;
-  uid:string | null = ""
-  constructor(private authService: AuthService,private storage: AngularFireStorage) {
+  uid: string | null = ""
+  imagePreviewUrl = ""
+  constructor(private authService: AuthService, private storage: AngularFireStorage) {
     this.hided = true;
     this.animationClass = 'none';
   }
 
   ngOnInit(): void {
     this.authService.obtenerUser()
-    this.authService.obtenerUser().subscribe(user =>{
+    this.authService.obtenerUser().subscribe(user => {
       if (user) {
         this.email = user.email
         this.authService.obtenerDatosUsuario(user.uid).subscribe(data => {
-          console.log(data.firtstime)
           this.nombre = data.name
-          if(data.firtstime){
-            this.image = "/assets/services/perfil.webp"
-
-
-          }else {
-
+          if (!data.firtstime) {
             this.image = data.photoURL
           }
 
@@ -60,11 +55,11 @@ export class HeaderComponent implements OnInit{
 
 
 
-  test(){
-    if(this.email == ""){
+  test() {
+    if (this.email == "") {
 
       return true
-    }else{
+    } else {
 
       return false
     }
@@ -73,6 +68,10 @@ export class HeaderComponent implements OnInit{
 
   onFileSelected(event: any): void {
     this.selectedFile = event.target.files?.[0] || null;
+    if (this.selectedFile) {
+      this.imagePreviewUrl = URL.createObjectURL(this.selectedFile);
+    }
+
     this.uploadProfilePhoto()
   }
 
@@ -81,16 +80,16 @@ export class HeaderComponent implements OnInit{
     if (this.selectedFile) {
 
       const user = await this.authService.obtenerUser();
-      console.log("entre1")
+
       if (user) {
         try {
 
-          console.log("entre2")
+
           const uid = this.authService.getCurrentUserUid();
           this.uid = await uid
           await this.authService.actualizarValorBooleano(this.uid || "ff");
           const photoURL = await this.authService.updateProfilePhoto(this.uid || "ff", this.selectedFile);
-          console.log("entre3")
+
           console.log('URL de la imagen de perfil actualizada:', photoURL);
 
 
@@ -109,7 +108,7 @@ export class HeaderComponent implements OnInit{
 
 
 
-  logout(){
+  logout() {
 
     this.authService.logout()
   }
