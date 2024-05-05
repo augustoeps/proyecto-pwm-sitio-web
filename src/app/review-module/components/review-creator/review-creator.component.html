@@ -1,7 +1,7 @@
 <div class="card">
   <h2>Escriba su reseña</h2>
   <div class="stars" (mouseleave)="unselectStars(0)">
-    <img  src="/assets/Vector.webp"  (mouseenter)="selectStars(i+1)" (mouseleave)="unselectStars(i)" class="unselectedStar" (click)="setRating(i+1)" id="star{{i+1}}" *ngFor="let item of [].constructor(5); let i = index">
+    <img  src="https://firebasestorage.googleapis.com/v0/b/test-5dfd9.appspot.com/o/assets%2FVector.webp?alt=media&token=a6a86d65-52d5-4c12-8e74-c350a8c142e0"  (mouseenter)="selectStars(i+1)" (mouseleave)="unselectStars(i)" class="unselectedStar" (click)="setRating(i+1)" id="star{{i+1}}" *ngFor="let item of [].constructor(5); let i = index">
   </div>
   <textarea [(ngModel)]="review" placeholder="Comparta su opinión con nosostros"></textarea>
   <input type="submit" (click)="submit()">
