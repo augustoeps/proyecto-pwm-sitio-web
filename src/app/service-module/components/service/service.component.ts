@@ -21,7 +21,6 @@ export class ServiceComponent implements OnInit, OnDestroy{
       this.id = +params['id']; // (+) converts string 'id' to a number
       this.dataloader.getData().subscribe((res: any )=> {
         for (let service of res.Servicios) {
-          console.log(service.id)
           if (service.id === this.id) {
             this.nombreServicio = service.attributes.Title
             this.descripcion = service.attributes.Descripcion

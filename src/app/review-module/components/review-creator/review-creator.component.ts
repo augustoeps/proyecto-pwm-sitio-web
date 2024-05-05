@@ -66,6 +66,7 @@ export class ReviewCreatorComponent {
       this.AuthService.obtenerUser().subscribe(user => {
       if (user) {
         this.AuthService.obtenerDatosUsuario(user.uid).subscribe(data => this.writeUserData(data.name, this.review, this.rating));
+        alert("Reseña completada");
       }
     })
   }
