@@ -12,6 +12,5 @@ export class ReviewsLoaderComponent implements OnInit{
 
   ngOnInit(): void {
     this.dataloader.getData().subscribe( (res:any) => this.inforeviews = Object.values(res.Reseñas))
-
   }
 }
