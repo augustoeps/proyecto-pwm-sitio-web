@@ -7,6 +7,7 @@ import { HomeModule } from '../home-module/home-module.module.module';
 import { GlobalModule } from '../global-module/global-module.module';
 import { DataLoader } from '../services/DataLoader.service';
 import { HttpClient } from '@angular/common/http';
+import { RouterLink } from "@angular/router";
 
 
 
@@ -17,11 +18,12 @@ import { HttpClient } from '@angular/common/http';
     ServicesComponent,
   ],
   providers: [DataLoader, HttpClient],
-  imports: [
-    CommonModule,
-    HomeModule,
-    GlobalModule
-  ],
+	imports: [
+		CommonModule,
+		HomeModule,
+		GlobalModule,
+		RouterLink
+	],
   bootstrap:[ServicesComponent]
 })
 export class ServiceModule { }

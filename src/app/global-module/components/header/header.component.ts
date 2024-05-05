@@ -42,12 +42,8 @@ export class HeaderComponent implements OnInit {
         if (typeof this.image !== 'undefined') {
           console.log("No hay foto")
         }
-
-        console.log(this.email)
-
       } else {
         this.email = ""
-
       }
 
     })

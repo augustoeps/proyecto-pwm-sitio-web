@@ -4,6 +4,7 @@
 	<section class="card-container" id="container">
 			<app-card-service
 			*ngFor="let service of infoservices"
+        [routerLink]="['/Service',service.id]"
 				[Titulo]="service.attributes.Title"
 				[Precio]="service.attributes.Precio"
 				[Imagen]="'/assets/services/'+service.attributes.imagen"
