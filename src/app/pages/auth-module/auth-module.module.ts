@@ -19,7 +19,7 @@ import { IonicModule } from '@ionic/angular';
   imports: [
     CommonModule,
     FormsModule,
-    IonicModule,
+    IonicModule.forRoot(),
     ReactiveFormsModule,
     provideStorage(() => getStorage())
   ],
