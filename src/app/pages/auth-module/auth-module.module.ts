@@ -4,6 +4,7 @@ import { LogInComponent } from './components/log-in/log-in.component';
 import { SignUpComponent } from './components/sign-up/sign-up.component';
 import { DataLoader } from '../../services/DataLoader.service';
 import {FormsModule} from "@angular/forms";
+import { ReactiveFormsModule } from '@angular/forms';
 import { getStorage, provideStorage } from "@angular/fire/storage";
 import { IonicModule } from '@ionic/angular';
 
@@ -19,6 +20,7 @@ import { IonicModule } from '@ionic/angular';
     CommonModule,
     FormsModule,
     IonicModule,
+    ReactiveFormsModule,
     provideStorage(() => getStorage())
   ],
   bootstrap: [SignUpComponent]

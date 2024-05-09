@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { AuthService } from "../../auth.service";
 import { Router } from '@angular/router';
-import { FormGroup, FormBuilder } from "@angular/forms";
+import { FormGroup, FormBuilder, ReactiveFormsModule, FormControl } from "@angular/forms";
 
 
 @Component({
@@ -16,9 +16,9 @@ export class SignUpComponent {
 
     constructor(private authservice: AuthService, private router: Router, public formBuilder: FormBuilder,) {
         this.userForm = this.formBuilder.group({
-            name: [''],
-            email: [''],
-            username: ['']
+            name: new FormControl,
+            email: new FormControl,
+            password: new FormControl
         })
     }
 
@@ -26,9 +26,8 @@ export class SignUpComponent {
         this.clean()
 
         if (this.emailerrorr() && this.verifiedPassword() === "" && this.nameempty()) {
-            const { email, password, name } = this.usuario
             try {
-                const x = await this.authservice.register(email, password, name)
+                const x = await this.authservice.register(this.userForm.value.email, this.userForm.value.password, this.userForm.value.name)
                 if (!(x == null)) {
 
                     this.router.navigate(["/"])
@@ -148,7 +147,7 @@ export class SignUpComponent {
 
     }
     verifiedPassword(): string {
-        const { password } = this.usuario
+        const { password } = this.userForm.value.password
         if (password.length < 6) {
             return "La Contraseña debe tener al menos 6 caracteres"
         }
