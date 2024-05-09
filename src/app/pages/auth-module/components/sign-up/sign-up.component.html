@@ -1,0 +1,42 @@
+<body>
+<form>
+  <h2>Registrate</h2>
+
+  <form [formGroup]="userForm" class="input-group" >
+    <div id="email-used" style="display: none; color: red; margin-top: 1%;"></div>
+    <input
+      type="text"
+      name="name"
+      id="name"
+      placeholder="Nombre y apellidos"
+      required
+    />
+    <div id="name-error" style="display: none; color: red; margin-top: 1%;"></div>
+    <input
+      type="email"
+      name="email"
+      id="email"
+      placeholder="Correo Electronico"
+      required
+      pattern="[a-z0-9._%+\-]+@[a-z0-9.\-]+\.[a-z]{2,}$"
+    />
+    <div id="email-error" style="display: none; color: red; margin-top: 1%;"></div>
+    <input
+      type="password"
+      name="password"
+      id="password"
+      placeholder="Contraseña"
+      required
+    />
+    <div id="passwordreg-error" style="display: none; color: red; margin-top: 1%;"></div>
+    <input
+      (click)="push()"
+      class="submit-button"
+      type="submit"
+      value="Registrarse"
+    />
+  </form>
+</form>
+<em>¿Ya tienes una cuenta?</em>
+<a class="link" href="/login">iniciar sesión</a>
+</body>

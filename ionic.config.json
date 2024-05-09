@@ -1,5 +1,7 @@
 {
-  "name": "ionic-app-base",
-  "integrations": {},
+  "name": "Proyecto-taller",
+  "integrations": {
+    "capacitor": {}
+  },
   "type": "angular"
 }
