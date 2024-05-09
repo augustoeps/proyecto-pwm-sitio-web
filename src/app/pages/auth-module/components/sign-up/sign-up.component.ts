@@ -14,7 +14,7 @@ export class SignUpComponent {
 
 
 
-    constructor(private authservice: AuthService, private router: Router, public formBuilder: FormBuilder,) {
+    constructor(private authservice: AuthService, private router: Router, public formBuilder: FormBuilder) {
         this.userForm = this.formBuilder.group({
             name: new FormControl,
             email: new FormControl,

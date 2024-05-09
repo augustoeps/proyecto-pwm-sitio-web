@@ -14,7 +14,7 @@ body {
 
 form {
   margin-top: 8em;
-  background-color: #fff;
+  background-color: #202b89;
   max-width: 23em;
   width: 100%;
   border-radius: 1em;
@@ -38,10 +38,11 @@ form {
   display: flex;
   flex-direction: column;
   text-align: left;
+  align-items: center;
 }
 
 h2 {
-  color: black;
+  color: aliceblue;
   font-size: 30px;
   margin-bottom: 20px;
 }
