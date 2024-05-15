@@ -8,15 +8,15 @@
 </ion-header>
 
 <ion-content>
-  <ion-card *ngIf="animal" class="ion-no-margin" style="margin: 4px !important">
-    <img [src]="animal.imageUrl" />
+  <ion-card *ngIf="service" class="ion-no-margin" style="margin: 4px !important">
+    <img [src]="service.imageUrl" />
 
     <ion-card-header>
-      <ion-card-title>{{ animal.name }}</ion-card-title>
+      <ion-card-title>{{ service.name }}</ion-card-title>
     </ion-card-header>
 
     <ion-card-content>
-      <p>{{ animal.description }}</p>
+      <p>{{ service.description }}</p>
     </ion-card-content>
 
     <ion-item lines="none">

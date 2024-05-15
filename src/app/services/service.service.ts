@@ -1,5 +1,5 @@
 import { Injectable } from "@angular/core";
-import { Animal } from "../models/animal.model";
+import { Service } from "../models/service.model";
 import {
   AngularFirestore,
   AngularFirestoreCollection,
@@ -8,33 +8,33 @@ import {
 @Injectable({
   providedIn: "root",
 })
-export class AnimalService {
+export class ServiceService {
 
-  private animalsCollection: AngularFirestoreCollection<Animal>;
+  private servicesCollection: AngularFirestoreCollection<Service>;
 
   constructor(private afs: AngularFirestore) {
-    this.animalsCollection = afs.collection<Animal>("animals");
+    this.servicesCollection = afs.collection<Service>("services");
   }
 
-  getAllAnimals() {
-    return this.animalsCollection.valueChanges({ idField: "id" });
+  getAllServices() {
+    return this.servicesCollection.valueChanges({ idField: "id" });
   }
 
-  getAnimalById(animalId: string) {
+  getServiceById(serviceId: string) {
     return this.afs
-      .doc<Animal>(`animals/${animalId}`)
+      .doc<Service>(`service/${serviceId}`)
       .valueChanges({ idField: "id" });
   }
 
 
-  toggleFavorite(animal: Animal) {
+  toggleFavorite(service: Service) {
     //animal.favorite = !animal.favorite;
-    this.afs.doc<Animal>(`animals/${animal.id}`).update(animal);
+    this.afs.doc<Service>(`services/${service.id}`).update(service);
   }
 
   getFavorites() {
     return this.afs
-      .collection<Animal>("animals", (ref) =>
+      .collection<Service>("services", (ref) =>
         ref.where("favorite", "==", true)
       )
       .valueChanges({ idField: "id" });

@@ -1,23 +1,23 @@
 import { Component, OnInit } from "@angular/core";
 import { ActivatedRoute } from "@angular/router";
-import { AnimalService } from "../../services/animal.service";
-import { Animal } from "../../models/animal.model";
+import { ServiceService } from "../../services/service.service";
+import {Service} from "../../models/service.model";
 import {DatabaseService} from "../../services/database.service";
 
 @Component({
-  selector: "app-animal-detail",
-  templateUrl: "./animal-detail.page.html",
-  styleUrls: ["./animal-detail.page.scss"],
+  selector: "app-service-detail",
+  templateUrl: "./Service-detail.page.html",
+  styleUrls: ["./Service-detail.page.scss"],
 })
-export class AnimalDetailPage implements OnInit {
+export class ServiceDetailPage implements OnInit {
 
-  animal?: Animal;
+  service?: Service;
   favorite = false;
-  favorites: Animal[] = [];
+  favorites: Service[] = [];
 
   constructor(
     private route: ActivatedRoute,
-    private animalService: AnimalService,
+    private serviceService: ServiceService,
     private sqlite: DatabaseService
   ) {}
 
@@ -34,11 +34,11 @@ export class AnimalDetailPage implements OnInit {
 
   readFavorites() {
     // Leemos los datos de la base de datos
-    this.sqlite.read().then((animals: Animal[]) => {
+    this.sqlite.read().then((services: Service[]) => {
       console.log("readFavorites");
-      console.log(JSON.stringify(animals));
+      console.log(JSON.stringify(services));
 
-      this.favorites = animals;
+      this.favorites = services;
       this.getAnimal();
 
     }).catch(err => {
@@ -50,14 +50,14 @@ export class AnimalDetailPage implements OnInit {
     const id: string = this.route.snapshot.paramMap.get("id");
 
     if (id) {
-      this.animalService
-        .getAnimalById(id)
-        .subscribe((animal) => {
-          this.animal = animal;
+      this.serviceService
+        .getServiceById(id)
+        .subscribe((service) => {
+          this.service = service;
           //this.favorite = animal.favorite;
 
           let item =
-            this.favorites.find(elem => elem.id === animal.id);
+            this.favorites.find(elem => elem.id === service.id);
 
           this.favorite = !!item;
 
@@ -70,7 +70,7 @@ export class AnimalDetailPage implements OnInit {
 
   createFavorite() {
     // Creamos un elemento en la base de datos
-    this.sqlite.create(this.animal)
+    this.sqlite.create(this.service)
       .then((changes) => {
         //console.log(changes);
         console.log("createFavorite");
@@ -84,7 +84,7 @@ export class AnimalDetailPage implements OnInit {
 
   deleteFavorite() {
     // Borramos el elemento
-    this.sqlite.delete(this.animal.id)
+    this.sqlite.delete(this.service.id)
       .then((changes) => {
         //console.log(changes);
         console.log("deleteFavorite");
@@ -98,7 +98,7 @@ export class AnimalDetailPage implements OnInit {
 
 
   toggleFavorite(): void {
-    if (this.animal) {
+    if (this.service) {
       //this.animal.favorite = this.favorite;
       //this.animalService.toggleFavorite(this.animal);
 

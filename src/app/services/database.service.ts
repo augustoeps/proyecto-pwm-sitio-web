@@ -6,7 +6,7 @@ import {
   CapacitorSQLite, capSQLiteChanges, capSQLiteValues, JsonSQLite
 } from "@capacitor-community/sqlite";
 import {Preferences} from "@capacitor/preferences";
-import {Animal} from "../models/animal.model";
+import {Service} from "../models/service.model";
 
 @Injectable({
   providedIn: 'root'
@@ -131,10 +131,10 @@ export class DatabaseService {
     return this.dbName;
   }
 
-  async create(animal: Animal) {
+  async create(service: Service) {
     // Sentencia para insertar un registro
     let sql =
-      'insert into animals(id, name, description, imageUrl) VALUES(?, ?, ?, ?)';
+      'insert into services(id, name, description, imageUrl) VALUES(?, ?, ?, ?)';
     // Obtengo la base de datos
     const dbName = await this.getDbName();
 
@@ -145,10 +145,10 @@ export class DatabaseService {
         {
           statement: sql,
           values: [
-            animal.id,
-            animal.name,
-            animal.description,
-            animal.imageUrl
+            service.id,
+            service.name,
+            service.description,
+            service.imageUrl
           ]
         }
       ]
@@ -164,7 +164,7 @@ export class DatabaseService {
 
   async read() {
     // Sentencia para leer todos los registros
-    let sql = 'SELECT * FROM animals';
+    let sql = 'SELECT * FROM services';
     // Obtengo la base de datos
     const dbName = await this.getDbName();
 
@@ -174,7 +174,7 @@ export class DatabaseService {
       statement: sql,
       values: [] // necesario para android
     }).then((response: capSQLiteValues) => {
-      let animals: Animal[] = [];
+      let animals: Service[] = [];
 
       // Si es IOS y hay datos, elimino la primera fila
       // Esto se debe a que la primera fila es informacion de las tablas
@@ -184,8 +184,8 @@ export class DatabaseService {
 
       // recorremos los datos
       for (let index = 0; index < response.values.length; index++) {
-        const animal = response.values[index];
-        animals.push(animal);
+        const service = response.values[index];
+        animals.push(service);
       }
       return animals;
 
@@ -195,7 +195,7 @@ export class DatabaseService {
 
   async delete(id: string) {
     // Sentencia para eliminar un registro
-    let sql = 'DELETE FROM animals WHERE id=?';
+    let sql = 'DELETE FROM services WHERE id=?';
     // Obtengo la base de datos
     const dbName = await this.getDbName();
 

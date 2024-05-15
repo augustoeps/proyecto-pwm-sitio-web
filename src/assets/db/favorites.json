@@ -5,7 +5,7 @@
   "mode": "full",
   "tables": [
     {
-      "name": "animals",
+      "name": "services",
       "schema": [
         {
           "column": "id",

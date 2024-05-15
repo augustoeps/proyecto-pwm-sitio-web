@@ -9,14 +9,14 @@ const routes: Routes = [
         loadChildren: () => import('./home/home.module').then(m => m.HomePageModule)
     },
     {
-        path: 'animals',
+        path: 'services',
         loadChildren: () =>
-            import('./pages/animal-list/animal-list.module').then(m => m.AnimalListPageModule)
+            import('./pages/service-list/service-list.module').then(m => m.ServiceListPageModule)
     },
     {
         path: 'animals/:id',
         loadChildren: () =>
-            import('./pages/animal-detail/animal-detail.module').then(m => m.AnimalDetailPageModule)
+            import('./pages/Service-detail/service-detail.module').then(m => m.ServiceDetailPageModule)
     },
     {
         path: '',
