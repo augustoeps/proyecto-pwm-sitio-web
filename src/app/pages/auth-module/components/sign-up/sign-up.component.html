@@ -1,5 +1,5 @@
 <body>
-  <form [formGroup]="userForm" (ngSubmit)="push()">
+  <form  (ngSubmit)="push()">
     <h2>Registrate</h2>
 
     <div class="input-group">
@@ -12,7 +12,7 @@
         name="name"
         id="name"
         placeholder="Nombre y apellidos"
-        formControlName="name"
+        [(ngModel)]="usuario.name"
         required
       />
       <div
@@ -24,7 +24,7 @@
         name="email"
         id="email"
         placeholder="Correo Electronico"
-        formControlName="email"
+        [(ngModel)]="usuario.email"
         required
         pattern="[a-z0-9._%+\-]+@[a-z0-9.\-]+\.[a-z]{2,}$"
       />
@@ -37,7 +37,7 @@
         name="password"
         id="password"
         placeholder="Contraseña"
-        formControlName="password"
+        [(ngModel)]="usuario.password"
         required
       />
       <div
