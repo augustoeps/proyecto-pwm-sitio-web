@@ -27,12 +27,13 @@ export class LogInComponent {
 
         try {
             await this.authservice.login(email, password);
+            console.log("hola")
             // Usuario ha iniciado sesión correctamente
-            this.router.navigate(['/']);
+            this.router.navigate(['/services']);
         } catch (error) {
             // @ts-ignore
             if (error.code === 'auth/invalid-credential') {
-                console.log("pedejo")
+
                 this.shownameError()
             }
             // @ts-ignore

@@ -40,6 +40,7 @@ export class AuthService {
     try {
       await this.afauth.signInWithEmailAndPassword(email, password);
     } catch (error) {
+      console.log("error")
       throw error; // Lanzar explícitamente el error para que sea capturado por la función que llama
     }
 
