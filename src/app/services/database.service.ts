@@ -133,6 +133,7 @@ export class DatabaseService {
 
   async create(service: Service) {
     // Sentencia para insertar un registro
+    console.log(service.name)
     let sql =
       'insert into services(id, name, description, imageUrl) VALUES(?, ?, ?, ?)';
     // Obtengo la base de datos

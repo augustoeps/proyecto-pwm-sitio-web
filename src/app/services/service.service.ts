@@ -13,7 +13,7 @@ export class ServiceService {
   private servicesCollection: AngularFirestoreCollection<Service>;
 
   constructor(private afs: AngularFirestore) {
-    this.servicesCollection = afs.collection<Service>("services");
+    this.servicesCollection = afs.collection<Service>("Services");
   }
 
   getAllServices() {
@@ -22,8 +22,8 @@ export class ServiceService {
 
   getServiceById(serviceId: string) {
     return this.afs
-      .doc<Service>(`service/${serviceId}`)
-      .valueChanges({ idField: "id" });
+      .doc<Service>(`Services/${serviceId}`)
+      .valueChanges({ idField: "id"});
   }
 
 

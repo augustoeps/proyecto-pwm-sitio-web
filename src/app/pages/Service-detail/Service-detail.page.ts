@@ -23,7 +23,7 @@ export class ServiceDetailPage implements OnInit {
 
   ngOnInit() {
     console.log("ngOnInit");
-    //this.getAnimal();
+
   }
 
   // Al entrar, leemos la base de datos
@@ -39,23 +39,24 @@ export class ServiceDetailPage implements OnInit {
       console.log(JSON.stringify(services));
 
       this.favorites = services;
-      this.getAnimal();
+      this.getService();
 
     }).catch(err => {
       console.error(err);
     })
   }
 
-  getAnimal(): void {
+  getService(): void {
     const id: string = this.route.snapshot.paramMap.get("id");
-
+    console.log(id)
     if (id) {
       this.serviceService
         .getServiceById(id)
         .subscribe((service) => {
+          console.log(service)
           this.service = service;
           //this.favorite = animal.favorite;
-
+          console.log(this.service.name)
           let item =
             this.favorites.find(elem => elem.id === service.id);
 
@@ -99,9 +100,6 @@ export class ServiceDetailPage implements OnInit {
 
   toggleFavorite(): void {
     if (this.service) {
-      //this.animal.favorite = this.favorite;
-      //this.animalService.toggleFavorite(this.animal);
-
       if(this.favorite) this.createFavorite();
       else this.deleteFavorite();
 
