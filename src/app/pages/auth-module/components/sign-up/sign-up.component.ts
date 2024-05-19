@@ -28,8 +28,8 @@ export class SignUpComponent {
             try {
                 const x = await this.authservice.register(this.usuario.email, this.usuario.password, this.usuario.name)
                 if (!(x == null)) {
-
                     this.router.navigate(["services"])
+                    return
                 } else {
                     this.emailrepet()
                 }
