@@ -5,10 +5,6 @@ import { LogInComponent } from './pages/auth-module/components/log-in/log-in.com
 
 const routes: Routes = [
     {
-        path: 'home',
-        loadChildren: () => import('./home/home.module').then(m => m.HomePageModule)
-    },
-    {
         path: 'services',
         loadChildren: () =>
             import('./pages/service-list/service-list.module').then(m => m.ServiceListPageModule)
